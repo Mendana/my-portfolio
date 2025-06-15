@@ -1,0 +1,315 @@
+.main-text {
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.main-text strong {
+    font-weight: 500;
+}
+
+/* Mobile nav */
+.mobile-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-nav {
+    width: 90%;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.mobile-nav-menu {
+    width: 90%;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-primary);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+}
+
+/* Backdrop overlay */
+.backdrop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 900;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 36px;
+}
+
+.mobile-nav-menu ul li a {
+    font-size: 1.8rem;
+}
+
+
+.mobile-nav-menu ul li:nth-last-child(2) {
+    margin-bottom: 12px;
+}
+
+.mobile-nav-menu .theme-container {
+    padding-top: 12px;
+    border-top: 1px solid var(--border-primary);
+}
+
+.mobile-nav-menu ul li h4 {
+    font-size: 1.25rem;
+}
+
+/* First section */
+
+.title-underline {
+  position: relative;
+}
+
+.title-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 3.5rem; 
+  height: 1px; 
+  background-color: black;
+}
+
+.brief-info-container {
+    margin-bottom: 12px;
+}
+
+.brief-info-container ul {
+    line-height: 2rem;
+    color: var(--text-secondary);
+}
+
+.brief-info-container ul li {
+    border-bottom: 1px solid var(--border-primary);
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Project View */
+.project-view-container {
+    width: 100%;
+    margin-top: 32px;
+    display: grid;
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.project-view-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    object-fit: cover;
+}
+
+.project-view-container h4 {
+    font-size: 1.8rem;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.project-view-container .project-arrow {
+    color: var(--text-tertiary);
+    rotate: 315deg;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: end;
+    transition: transform 0.3s ease;
+}
+
+.project-view-container .project-arrow:hover {
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.project-view-container article {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.project-view-container article h3 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.project-view-container article p {
+    font-size: 1.4rem;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.project-view-container article ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-view-container article ul li {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    transition: background-color 3s ease;
+}
+
+.project-view-container article ul li:hover {
+    background-color: var(--text-secondary);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-view-container article div p {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.project-view-container .project-genre {
+    padding: 4px 10px;
+    border-radius: 16px;
+    background-color: var(--text-primary);
+    color: white;
+    margin-right: 12px;
+}
+
+.project-status {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-live {
+    background-color: var(--success)
+}
+
+.status-development {
+    background-color: var(--warning); /* naranja */
+}
+
+.status-down {
+    background-color: var(--error); /* rojo */
+}
+
+/* Expertise section */
+.list-expertise {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.list-expertise .expertise-area{
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    font-weight: bold;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-primary);
+    margin-bottom: 0.8rem;
+    margin-top: 2rem;
+}
+
+.list-expertise .list-expertise-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.list-expertise .list-expertise-items li {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+/* About me */
+.list-about .about-item{
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    font-weight: bold;
+    padding-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+
+.list-about .list-about-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.list-about .list-about-item li{
+    font-size: 1.4rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}

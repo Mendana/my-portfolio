@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "name": "Neural Network Visualizer",
+            "description": "An interactive platform that demystifies neural networks through real-time visualization.",
+            "technologies": ["React", "D3.js", "TensorFlow.js", "WebGL"],
+            "image": "neural-network-visualizer.png",
+            "link": "#",
+            "genre": "AI/ML",
+            "status": "Development",
+            "year": 2023
+        },
+        {
+            "name": "Blockchain Explorer",
+            "description": "A web application that allows users to explore blockchain transactions and smart contracts.",
+            "technologies": ["React", "Node.js", "Ethereum", "Web3.js"],
+            "image": "blockchain-explorer.png",
+            "link": "#",
+            "genre": "Blockchain",
+            "status": "Live",
+            "year": 2022
+        }
+    ]
+}
