@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   /* Typography */
   font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
@@ -41,6 +40,17 @@
   --error-bg: #fee2e2;
 }
 
+:root.dark {
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-tertiary: var(--dark-text-tertiary);
+  --text-muted: var(--dark-text-muted);
+  --border-primary: var(--dark-border-primary);
+  --border-secondary: var(--dark-border-secondary);
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -48,4 +58,15 @@ html {
 
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Aseguramos que el root también tenga el color de fondo */
+#root {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
