@@ -5,6 +5,7 @@ import ProjectView from './components/ProjectView'
 import projectsData from './data/projects.json'
 import Expertise from './components/Expertise'
 import AboutMe from './components/AboutMe'
+import MyFooter from './components/MyFooter'
 
 function App() {
   return (
@@ -86,6 +87,9 @@ function App() {
           <AboutMe />
         </section>
       </main>
+      <footer>
+        <MyFooter />
+      </footer>
     </>
   )
 }
