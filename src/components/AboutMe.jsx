@@ -1,8 +1,9 @@
 function AboutMe() {
 
     return (
-        <div>
+        <div className="about-me-container">
             <article>
+                <h2 className='text-5xl font-bold mb-8 lg:text-6xl'>ABOUT</h2>
                 <p className='main-text mb-8'>I'm a developer who believes in the intersection of technology and human experience. My journey began with curiosity about how digital systems work and has evolved into expertise in both traditional web development and cutting-edge AI technologies.</p>
 
                 <p className='main-text mb-8'>Currently focused on projects that push the boundaries of what's possible with modern web technologies, particularly in the realm of artificial intelligence and machine learning integration. </p>

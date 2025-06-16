@@ -10,7 +10,7 @@ function MyFooter() {
         <div className="footer-container">
             <section className="footer-upper-section">
                 <article>
-                    <h2 className="text-5xl font-bold leading-15 pb-8">LET'S WORK <br /> TOGETHER</h2>
+                    <h2 className="text-5xl font-bold leading-15 pb-8 md:text-6xl lg:text-7xl lg:leading-23">LET'S WORK <br /> TOGETHER</h2>
                     <p className="main-text">Ready to bring your ideas to life? I'm available for new projects and collaborations</p>
                     <div className="button-container">
                         <button><CiMail className="text-black" size={16}/> GET IN TOUCH</button>
@@ -33,10 +33,10 @@ function MyFooter() {
                     </ul>
                 </article>
             </section>
-            <section className="footer-lower-section">
+            <section className="footer-lower-section md:mt-18">
                 <article>
-                    <p className="text-large text-[var(--dark-text-tertiary)] font-light">© 2024 Diego Díaz Menda. All rights reserved.</p>
-                    <p className="text-large text-[var(--dark-text-tertiary)] font-light">Crafted with care and a passion for technology.</p>
+                    <p className="text-large text-[var(--dark-text-tertiary)] font-light md:text-xl">© 2024 Diego Díaz Menda. All rights reserved.</p>
+                    <p className="text-large text-[var(--dark-text-tertiary)] font-light md:text-xl">Crafted with care and a passion for technology.</p>
                 </article>
             </section>
         </div>

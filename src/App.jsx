@@ -1,24 +1,34 @@
 import './App.css'
 import MobileNavBar from './components/MobileNavBar'
+import DesktopNavBar from './components/DesktopNavBar'
 import { Typewriter } from 'react-simple-typewriter'
 import ProjectView from './components/ProjectView'
 import projectsData from './data/projects.json'
 import Expertise from './components/Expertise'
 import AboutMe from './components/AboutMe'
 import MyFooter from './components/MyFooter'
+import ScrollProgressBar from './components/ScrollProgressBar'
 
 function App() {
   return (
-    <>
-      <MobileNavBar />
-      <header className='w-9/10 mx-auto'>
+    <main className='bg-white'>
+      <ScrollProgressBar />
+      {/* Nav responsive */}
+      <div className="md:hidden">
+        <MobileNavBar />
+      </div>
+      <div className="hidden md:block">
+        <DesktopNavBar />
+      </div>
+      
+      <header className='w-9/10 mx-auto lg:max-w-[1200px]'>
         <h2 className='title-underline text-xl text-[var(--text-tertiary)] mt-40 '>
           PORTFOLIO 2025
         </h2>
       </header>
-      <main className='w-9/10 mx-auto mt-12'>
+      <main className='w-9/10 mx-auto mt-12 lg:max-w-[1200px]'>
         <section className='mb-50'>
-          <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem]'>
+          <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl'>
             <Typewriter
               words={['DIEGO DÍAZ MENDAÑA']}
               loop={0} // 0 = infinito
@@ -29,35 +39,35 @@ function App() {
               delaySpeed={2000} // tiempo que espera antes de empezar a borrar
             />
           </h1>
-          <div className='flex flex-col gap-10 mt-16'>
+          <div className='info-container flex flex-col gap-10 mt-16'>
             <article className='brief-info-container'>
               <ul>
                 <li>
-                  <h6 className='text-xl font-medium'>LOCATION</h6>
-                  <p>Oviedo, España</p>
+                  <h6 className='text-xl font-medium md:text-2xl'>LOCATION</h6>
+                  <p className='md:text-xl'>Oviedo, España</p>
                 </li>
 
                 <li>
-                  <h6 className='text-xl font-medium'>STATUS</h6>
-                  <p>Studying. Available for Projects</p>
+                  <h6 className='text-xl font-medium md:text-2xl'>STATUS</h6>
+                  <p className='md:text-xl'>Studying. Available for Projects</p>
                 </li>
                 <li>
-                  <h6 className='text-xl font-medium'>EXPERIENCE</h6>
-                  <p>No professional experience yet</p>
+                  <h6 className='text-xl font-medium md:text-2xl'>EXPERIENCE</h6>
+                  <p className='md:text-xl'>No professional experience yet</p>
                 </li>
               </ul>
             </article>
 
-            <article>
+            <article className='brief-resume-container'>
               <p className='main-text'>Studying a double degree in <strong>Software Engineering</strong> and <strong>Mathematics</strong> in Oviedo. Currently a student at Platzi and I am interested in <strong>full-stack</strong> development, <strong>Artificial Intelligence</strong> and Machine Learning.</p>
             </article>
           </div>
         </section>
 
         <section id='work' className='mb-50'>
-          <h2 className='text-5xl font-bold mb-8'>SELECTED WORK</h2>
+          <h2 className='text-5xl font-bold mb-8 lg:text-6xl'>SELECTED WORK</h2>
 
-          <p className='main-text'>A collection of some of my projects in both web development and AI.</p>
+          <p className='main-text lg:w-7/10'>A collection of some of my projects in both web development and AI.</p>
 
           <div>
             {projectsData.projects.map((project, index) => (
@@ -78,19 +88,17 @@ function App() {
         </section>
 
         <section className='mb-50'>
-          <h2 className='text-5xl font-bold mb-8'>EXPERTISE</h2>
           <Expertise />
         </section>
 
         <section id='about' className='mb-50'>
-          <h2 className='text-5xl font-bold mb-8'>ABOUT</h2>
           <AboutMe />
         </section>
       </main>
-      <footer>
+      <footer id='contact'>
         <MyFooter />
       </footer>
-    </>
+    </main>
   )
 }
 

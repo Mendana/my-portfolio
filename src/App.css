@@ -76,6 +76,24 @@
     font-size: 1.25rem;
 }
 
+
+/* Desktop nav */
+.desktop-nav-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.desktop-nav {
+    backdrop-filter: blur(8px);
+}
+
+.desktop-nav li a {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+}
+
 /* First section */
 
 .title-underline {
@@ -123,6 +141,7 @@
 .project-view-container img {
     width: 100%;
     height: auto;
+    max-height: 250px;
     border-radius: 16px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     grid-column: 1 / 3;
@@ -260,34 +279,43 @@
 }
 
 /* Expertise section */
-.list-expertise {
-    width: 100%;
+.grid-expertise {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    gap: 2rem;
+    width: 100%;
 }
 
-.list-expertise .expertise-area{
+.expertise-group {
+    width: 100%;
+}
+
+.expertise-area {
     font-size: 1.6rem;
     color: var(--text-secondary);
     font-weight: bold;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--border-primary);
     margin-bottom: 0.8rem;
-    margin-top: 2rem;
 }
 
-.list-expertise .list-expertise-items {
+.list-expertise-items {
     list-style: none;
     padding: 0;
     margin: 0;
     line-height: 1.3;
 }
 
-.list-expertise .list-expertise-items li {
+.list-expertise-items li {
     font-size: 1.2rem;
     color: var(--text-tertiary);
     margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-expertise {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* About me */
@@ -391,4 +419,149 @@
     justify-content: center;
     gap: 12px;
     padding-bottom: 32px;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: var(--text-primary);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+@media (min-width: 768px) {
+    .project-view-container {
+        border-top: 1.5px solid var(--border-primary);
+        padding-top: 32px;
+        margin-top: 64px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 2.4rem;
+    }
+
+    .project-view-container h4 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .project-view-container article {
+        grid-column: 2 / 8;
+        grid-row: 1 / 2;
+        align-self: center;
+    }
+
+    .project-view-container img {
+        grid-column: 8 / 12;
+        grid-row: 1 / 2;
+        align-self: center;
+    }
+
+    .project-view-container .project-arrow {
+        grid-column: 12 / 13;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .project-view-container .project-status {
+        top: 12px;
+        right: inherit;
+        right: 12px;
+        grid-column: 8 / 12;
+        grid-row: 1 / 2;
+    }
+
+    .list-expertise {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .footer-container .button-container {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .footer-container .list-footer .footer-item {
+        font-size: 1.8rem;
+    }
+
+    .footer-container .list-footer-item li {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+  
+}
+
+@media (min-width: 1024px) {
+    .info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+    }
+
+    .brief-info-container {
+        grid-column: 2;
+    }
+
+    .brief-resume-container {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .expertise-area {
+        font-size: 1.8rem;
+    }
+
+    .list-expertise-items {
+        line-height: 1.5;
+    }
+
+    .list-expertise-items li {
+        font-size: 1.4rem;
+    }
+
+    .about-me-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 5rem;
+    }
+
+    
+    .list-about .about-item{
+        font-size: 1.8rem;
+    }
+
+    .list-about .list-about-item {
+        line-height: 1.5;
+    }
+
+    .footer-upper-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        max-width: 1200px;
+    }
+
+    
+    .footer-container .footer-lower-section article {
+        width: 90%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 32px;
+    }
 }
