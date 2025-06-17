@@ -31,7 +31,7 @@ function AppContent() {
         </header>
         <main className='w-9/10 mx-auto mt-12 lg:max-w-[1200px]'>
           <section className='mb-50'>
-            <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl dark:text-white'>
+            <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl text-[var(--text-primary)]'>
               <Typewriter
                 words={['DIEGO DÍAZ MENDAÑA']}
                 loop={0} // 0 = infinito
