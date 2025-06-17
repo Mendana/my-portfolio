@@ -2,7 +2,7 @@ function Expertise() {
     return (
         <div className="flex flex-col gap-15 lg:flex-row lg:gap-20 ">
             <article className="lg:w-3/2">
-                <h2 className='text-5xl font-bold mb-8 lg:text-6xl dark:text-white'>EXPERTISE</h2>
+                <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>EXPERTISE</h2>
                 <p className="main-text mb-8">
                 My technical skills currently encompass modern web technologies and the principles of data analysis. As a student, I am continuously expanding my knowledge by exploring different tools and branches of computer science that I am passionate about.</p>
 

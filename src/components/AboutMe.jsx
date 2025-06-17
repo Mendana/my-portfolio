@@ -3,7 +3,7 @@ function AboutMe() {
     return (
         <div className="about-me-container">
             <article>
-                <h2 className='text-5xl font-bold mb-8 lg:text-6xl dark:text-white'>ABOUT</h2>
+                <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>ABOUT</h2>
                 <p className='main-text mb-8'>
                     I'm a self-taught developer passionate about creating digital experiences that blend functionality, design, and advanced technology. My journey started with a deep curiosity for how web applications work under the hood.
                 </p>

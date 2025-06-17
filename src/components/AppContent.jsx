@@ -67,8 +67,8 @@ function AppContent() {
             </div>
           </section>
 
-          <section id='work' className='mb-50'>
-            <h2 className='text-5xl font-bold mb-8 lg:text-6xl dark:text-white'>SELECTED WORK</h2>
+          <section id='work' className='mb-80'>
+            <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>SELECTED WORK</h2>
 
             <p className='main-text lg:w-7/10'>A collection of some of my projects in both web development and AI.</p>
 
@@ -90,11 +90,11 @@ function AppContent() {
             </div>
           </section>
 
-          <section className='mb-50'>
+          <section className='mb-80'>
             <Expertise />
           </section>
 
-          <section id='about' className='mb-50'>
+          <section id='about' className='mb-80'>
             <AboutMe />
           </section>
         </main>
