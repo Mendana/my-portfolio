@@ -120,7 +120,7 @@
   bottom: -0.5rem;
   width: 3.5rem; 
   height: 1px; 
-  background-color: black;
+  background-color: var(--text-primary);
 }
 
 .brief-info-container {
@@ -238,7 +238,7 @@
     padding: 4px 10px;
     border-radius: 16px;
     background-color: var(--text-primary);
-    color: white;
+    color: var(--border-primary);
     margin-right: 12px;
 }
 
@@ -380,15 +380,20 @@
     margin-bottom: 32px;
 }
 
-.footer-container .button-container button {
+.footer-container .button-container button,
+.footer-container .button-container .get-in-touch-link {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px 24px;
-    background-color: var(--bg-secondary);
+    background-color: white;
     gap: 8px;
     color: black;
     font-size: 1.4rem;
+}
+
+.footer-container .button-container button:hover {
+    cursor: pointer;
 }
 
 .footer-container .list-footer {
@@ -409,14 +414,12 @@
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.footer-container .list-footer-item li {
     color: var(--dark-text-secondary);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 300;
 }
+
 
 .footer-container .footer-lower-section {
     padding-top: 24px;

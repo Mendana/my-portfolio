@@ -1,24 +1,34 @@
 {
     "projects": [
         {
-            "name": "Neural Network Visualizer",
-            "description": "An interactive platform that demystifies neural networks through real-time visualization.",
-            "technologies": ["React", "D3.js", "TensorFlow.js", "WebGL"],
-            "image": "neural-network-visualizer.png",
-            "link": "#",
-            "genre": "AI/ML",
-            "status": "Development",
-            "year": 2023
+            "name": "Frontend - Admin Dashboard for Schedule Management",
+            "description": "An interactive platform for managing schedules of the university's subjects, allowing administrators to create, update, and delete classes and manage student enrollments.",
+            "technologies": ["React", "JavaScript", "Tailwind CSS"],
+            "image": "/images/pceo-dashboard.avif",
+            "link": "https://pceo-dashboard.web.app/",
+            "genre": "Frontend",
+            "status": "Live",
+            "year": 2025
         },
         {
-            "name": "Blockchain Explorer",
-            "description": "A web application that allows users to explore blockchain transactions and smart contracts.",
-            "technologies": ["React", "Node.js", "Ethereum", "Web3.js"],
-            "image": "blockchain-explorer.png",
-            "link": "#",
-            "genre": "Blockchain",
+            "name": "Frontend - Schedule Visualizer",
+            "description": "A web application that allows students to visualize their class schedules, providing an intuitive interface to view their academic timetable.",
+            "technologies": ["React", "JavaScript", "Tailwind CSS"],
+            "image": "/images/horariospceo.avif",
+            "link": "https://horariospceo.web.app/",
+            "genre": "Frontend",
             "status": "Live",
-            "year": 2022
+            "year": 2025
+        },
+        {
+            "name": "Python Scrapper for extracting the schedules",
+            "description": "A Python script designed to scrape class schedules from the university's website and a SharePoint, automating the process of data extraction for further processing.",
+            "technologies": ["Python", "Playwright"],
+            "image": "/images/scrapper.png",
+            "link": "https://github.com/Mendana/scraper-horarios",
+            "genre": "Scrapper",
+            "status": "Live",
+            "year": 2025
         }
     ]
 }

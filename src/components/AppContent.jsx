@@ -31,7 +31,7 @@ function AppContent() {
         </header>
         <main className='w-9/10 mx-auto mt-12 lg:max-w-[1200px]'>
           <section className='mb-50'>
-            <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl'>
+            <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl dark:text-white'>
               <Typewriter
                 words={['DIEGO DÍAZ MENDAÑA']}
                 loop={0} // 0 = infinito
@@ -68,7 +68,7 @@ function AppContent() {
           </section>
 
           <section id='work' className='mb-50'>
-            <h2 className='text-5xl font-bold mb-8 lg:text-6xl'>SELECTED WORK</h2>
+            <h2 className='text-5xl font-bold mb-8 lg:text-6xl dark:text-white'>SELECTED WORK</h2>
 
             <p className='main-text lg:w-7/10'>A collection of some of my projects in both web development and AI.</p>
 

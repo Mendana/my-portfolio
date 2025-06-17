@@ -26,13 +26,20 @@ function ProjectView({
 
     return (
         <div className="project-view-container">
-            <img src="https://placeholder.pics/svg/400x300" alt="Placeholder" />
+            <img src={image} alt="project image" />
             <span className="project-status">
                 <span className={`status-indicator ${getStatusColor(status)}`}></span>
                 {status.charAt(0).toUpperCase() + status.slice(1)}
             </span>
             <h4>{(id <= 9) ? '0' + id : id}</h4>
-            <FaArrowRight size={18} className="project-arrow"/>
+            <a 
+                href={link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-arrow"
+            >
+                <FaArrowRight size={18} />
+            </a>
             <article>
                 <h3>{title}</h3>
                 <p>{description}</p>
