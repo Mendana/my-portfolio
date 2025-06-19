@@ -35,11 +35,12 @@ function MobileNavBar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.nav 
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className={`mobile-nav-menu mt-8 justify-self-center
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        style={{ height: isOpen ? 'auto' : 0, overflow: 'hidden' }}
+                        transition={{ duration: 0.3 }}
+                        className={`mobile-nav-menu mt-8
                             ${isDark ? 'bg-[var(--dark-bg-primary)] border-[var(--dark-border-primary)]' : 
                             'bg-white border-[var(--border-primary)]'}`}
                     >
