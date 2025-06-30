@@ -1,12 +1,50 @@
-# React + Vite
+# Mi Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido/a a mi portafolio personal. Este proyecto es una aplicación web donde presento mis trabajos, habilidades y experiencia profesional.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- JavaScript, CSS
+- Tailwind CSS
+- Firebase
 
-## Expanding the ESLint configuration
+## ✨ Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Presentación personal y biografía
+- Sección de proyectos destacados
+- Listado de habilidades y tecnologías
+- Contacto directo (formulario o links a redes)
+- Diseño responsive adaptable a dispositivos móviles
+
+## 📦 Instalación y uso
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/Mendana/my-portfolio.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## 🌐 Despliegue
+
+El portafolio está desplegado en: [mi portfolio](https://diego-diaz-mendana.web.app).
+
+## 📄 Licencia
+
+MIT License. Puedes ver el archivo LICENSE para más detalles.
+
+## 🙋‍♂️ Contacto
+
+- Email: diegodiazmenda@gmail.com
+- LinkedIn: [Diego Díaz Mendaña](www.linkedin.com/in/diego-díaz-mendaña)
+
+---
+
+¡Gracias por visitar mi portafolio!
