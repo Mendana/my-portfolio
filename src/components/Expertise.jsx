@@ -21,6 +21,7 @@ function Expertise() {
                         <li>React</li>
                         <li>Tailwind CSS</li>
                         <li>JavaScript</li>
+                        <li>Materialize</li>
                     </ul>
                 </div>
                 <div className="expertise-group">
