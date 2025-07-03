@@ -294,6 +294,51 @@
     background-color: var(--error); /* rojo */
 }
 
+/* Education section */
+.education-item {
+    padding-block: 8px;
+}
+.education-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+.education-item__heading h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.education-item__heading span {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    border-radius: 16px;
+}
+
+.education-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.education-item__info h6 {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.education-item__info span {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+}
+
+.education-item__info p {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0;
+}
+
 /* Expertise section */
 .grid-expertise {
     display: grid;

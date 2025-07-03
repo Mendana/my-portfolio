@@ -3,11 +3,11 @@ import MobileNavBar from './MobileNavBar';
 import DesktopNavBar from './DesktopNavBar';
 import ScrollProgressBar from './ScrollProgressBar';
 import ProjectView from './ProjectView';
-import Expertise from './Expertise';
 import AboutMe from './AboutMe';
 import MyFooter from './MyFooter';
 import { Typewriter } from 'react-simple-typewriter';
 import projectsData from '../data/projects.json';
+import Education from './Education';
 
 function AppContent() {
     const { isDark } = useTheme();
@@ -91,7 +91,7 @@ function AppContent() {
           </section>
 
           <section className='mb-80'>
-            <Expertise />
+            <Education />
           </section>
 
           <section id='about' className='mb-80'>

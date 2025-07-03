@@ -1,0 +1,28 @@
+{
+    "education": [
+        {
+            "title": "Double Degree in Software Engineering and Mathematics",
+            "status": "In Progress",
+            "institution": "Universidad de Oviedo",
+            "startYear": "sep. 2023",
+            "endYear": "Present",
+            "description": ""
+        },
+        {
+            "title": "Baccalaureate in Science and Technology",
+            "status": "Completed",
+            "institution": "IES Ordoño II",
+            "startYear": "sep. 2021",
+            "endYear": "jun. 2023",
+            "description": "Graduated with honors"
+        },
+        {
+            "title": "Basic technical cybersecurity course",
+            "status": "Completed",
+            "institution": "INCIBE",
+            "startYear": "jun. 2024",
+            "endYear": "dec. 2024",
+            "description": "250 hours focused on Cybersecurity systems management, forensics, compliance and incident response"
+        }
+    ]
+}
