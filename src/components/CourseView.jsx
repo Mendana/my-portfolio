@@ -1,4 +1,4 @@
-function FormalEducationItem({
+function CourseView({
     title,
     status,
     institution,
@@ -49,4 +49,4 @@ function FormalEducationItem({
     );
 }
 
-export default FormalEducationItem;
+export default CourseView;

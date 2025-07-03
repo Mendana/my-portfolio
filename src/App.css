@@ -297,8 +297,13 @@
 /* Education section */
 .education-item {
     padding-block: 8px;
+    transform: scale(1);
+    background-color: transparent;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
+
 .education-item:hover {
+    transform: scale(1.02);
     background-color: var(--bg-secondary);
 }
 
@@ -310,6 +315,8 @@
 }
 
 .education-item__heading span {
+    width: fit-content;
+    height: fit-content;
     font-size: 1.2rem;
     padding: 4px 8px;
     border-radius: 16px;
@@ -329,12 +336,12 @@
 }
 
 .education-item__info span {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-tertiary);
 }
 
 .education-item__info p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-tertiary);
     margin-bottom: 0;
 }
