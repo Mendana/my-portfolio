@@ -1,7 +1,7 @@
 {
     "certifications": [
         {
-            "title": "Introducción a Machine Learning",
+            "title": "Introduction to Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
             "hours": 9,
@@ -9,28 +9,588 @@
             "aptitudes": ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
         },
         {
-            "title": "Fundamentos de IA Para Data Y Machine Learning",
+            "title": "AI Fundamentals for Data and Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
             "hours": 17,
             "area": "ML/AI",
-            "aptitudes": ["Python", "IA", "ML"]
+            "aptitudes": ["Python", "IA", "ML", "Algoritmos"]
         },
         {
-            "title": "Manejo de Datos Faltantes: Imputación",
+            "title": "Handling Missing Data: Imputation",
             "institution": "Platzi",
             "date": "06-2025",
             "hours": 11,
             "area": "Data Science",
-            "aptitudes": ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+            "aptitudes": ["Pandas", "Data Cleaning", "Scikit-learn", "Imputación"]
         },
         {
-            "title": "Manejo de Datos Faltantes: Detección y Exploración",
+            "title": "Handling Missing Data: Detection and Exploration",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 13,
+            "area": "Data Science",
+            "aptitudes": ["Pandas", "Data Analysis", "NumPy", "Matplotlib"]
+        },
+        {
+            "title": "Professional Environment Setup for Data Science",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 10,
+            "area": "Data Science",
+            "aptitudes": ["Jupyter", "Anaconda", "Coockiecutter"]
+        },
+        {
+            "title": "Python for Data Science",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 13,
+            "area": "Data Science",
+            "aptitudes": ["Python", "Pandas", "NumPy"]
+        },
+        {
+            "title": "Exploratory Data Analysis",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 15,
+            "area": "Data Science",
+            "aptitudes": ["Pandas", "Matplotlib", "Seaborn"]
+        },
+        {
+            "title": "Statistics and Probability",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 19,
+            "area": "Data Science",
+            "aptitudes": ["Estadística", "Probabilidad", "Distribuciones"]
+        },
+        {
+            "title": "Basic Excel: Tables and Formulas for Data Management",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 16,
+            "area": "Data Science",
+            "aptitudes": ["Excel"]
+        },
+        {
+            "title": "ChatGPT",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 15,
+            "area": "Data Science",
+            "aptitudes": ["IA", "NLP", "Chatbots", "OpenAI"]
+        },
+        {
+            "title": "Data Visualization for BI",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 13,
+            "area": "Data Science",
+            "aptitudes": ["Power BI", "Tableau"]
+        },
+        {
+            "title": "Ethics and Data Management for Data Science and AI",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 9,
+            "area": "Data Science",
+            "aptitudes": ["Ética", "GDPR"]
+        },
+        {
+            "title": "Guide to Starting a Career in Data Science and AI",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 11,
+            "area": "ML/AI",
+            "aptitudes": ["IA", "Data Science"]
+        },
+        {
+            "title": "Introduction to AI",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 4,
+            "area": "ML/AI",
+            "aptitudes": ["IA"]
+        },
+        {
+            "title": "Mathematics for Data Science: Probability",
+            "institution": "Platzi",
+            "date": "03-2022",
+            "hours": 14,
+            "area": "Data Science",
+            "aptitudes": ["Probabilidad", "Estadística", "Distribuciones"]
+        },
+        {
+            "title": "Mathematics for Data Science: Descriptive Statistics",
+            "institution": "Platzi",
+            "date": "03-2022",
+            "hours": 14,
+            "area": "Data Science",
+            "aptitudes": ["Estadística", "Medidas"]
+        },
+        {
+            "title": "Data Manipulation and Analysis with Pandas and Python",
+            "institution": "Platzi",
+            "date": "01-2022",
+            "hours": 12,
+            "area": "Data Science",
+            "aptitudes": ["Pandas", "Python", "NumPy", "Matplotlib"]
+        },
+        {
+            "title": "Working Environment with Jupyter Notebooks and Anaconda",
+            "institution": "Platzi",
+            "date": "12-2021",
+            "hours": 10,
+            "area": "Data Science",
+            "aptitudes": ["Jupyter", "Anaconda", "Notebooks"]
+        },
+        {
+            "title": "Mathematical Functions for Data Science and AI",
+            "institution": "Platzi",
+            "date": "02-2021",
+            "hours": 12,
+            "area": "Data Science",
+            "aptitudes": ["Matemáticas", "Cálculo", "Álgebra"]
+        },
+        {
+            "title": "Materialize",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 8,
+            "area": "Frontend",
+            "aptitudes": ["Materialize", "Material Design"]
+        },
+        {
+            "title": "Practical CSS Animations",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 10,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Animaciones", "Transiciones"]
+        },
+        {
+            "title": "CSS Architectures",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 16,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "BEM", "SMACSS", "OOCSS", "Atomic Design"]
+        },
+        {
+            "title": "TailwindCSS",
             "institution": "Platzi",
             "date": "06-2025",
             "hours": 11,
-            "area": "Data Science",
-            "aptitudes": ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+            "area": "Frontend",
+            "aptitudes": ["Tailwind", "CSS"]
+        },
+        {
+            "title": "Sass Fundamentals: Build Your First Landing Page",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 26,
+            "area": "Frontend",
+            "aptitudes": ["Sass", "CSS", "Preprocesadores"]
+        },
+        {
+            "title": "CSS Animations",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 11,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Keyframes", "Transiciones", "Animaciones"]
+        },
+        {
+            "title": "CSS Transformations and Transitions",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 18,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Transform", "Transition", "Animaciones"]
+        },
+        {
+            "title": "Basic CSS Grid",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 14,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Grid Layout"]
+        },
+        {
+            "title": "Web Design with CSS Grid and Flexbox",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 17,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Grid Layout", "Flexbox"]
+        },
+        {
+            "title": "Web Design with CSS and Flexbox",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 17,
+            "area": "Frontend",
+            "aptitudes": ["Flexbox", "CSS"]
+        },
+        {
+            "title": "Practical CSS Layout",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 19,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Maquetación", "HTML"]
+        },
+        {
+            "title": "Practical Frontend Developer",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 13,
+            "area": "Frontend",
+            "aptitudes": ["HTML", "CSS"]
+        },
+        {
+            "title": "Frontend Developer",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 15,
+            "area": "Frontend",
+            "aptitudes": ["HTML", "CSS"]
+        },
+        {
+            "title": "JavaScript Fundamentals",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 19,
+            "area": "Programming Languages",
+            "aptitudes": ["JavaScript", "ES6"]
+        },
+        {
+            "title": "Introduction to the Web: History and How the Internet Works",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 12,
+            "area": "Software basis",
+            "aptitudes": ["Internet", "HTTP", "DNS", "Web"]
+        },
+        {
+            "title": "Django",
+            "institution": "Platzi",
+            "date": "12-2021",
+            "hours": 23,
+            "area": "Backend",
+            "aptitudes": ["Django", "Python"]
+        },
+        {
+            "title": "FastAPI: Modularization, Advanced Data and Errors",
+            "institution": "Platzi",
+            "date": "11-2021",
+            "hours": 18,
+            "area": "Backend",
+            "aptitudes": ["FastAPI", "Python", "API"]
+        },
+        {
+            "title": "FastAPI: Fundamentals, Path Operators and Validations",
+            "institution": "Platzi",
+            "date": "10-2021",
+            "hours": 15,
+            "area": "Backend",
+            "aptitudes": ["FastAPI", "Python", "API"]
+        },
+        {
+            "title": "Flask",
+            "institution": "Platzi",
+            "date": "10-2021",
+            "hours": 12,
+            "area": "Backend",
+            "aptitudes": ["Flask", "Python"]
+        },
+        {
+            "title": "Basic JavaScript",
+            "institution": "Platzi",
+            "date": "06-2021",
+            "hours": 19,
+            "area": "Programming Languages",
+            "aptitudes": ["JavaScript", "ES6"]
+        },
+        {
+            "title": "Practical HTML and CSS",
+            "institution": "Platzi",
+            "date": "06-2021",
+            "hours": 16,
+            "area": "Frontend",
+            "aptitudes": ["HTML", "CSS"]
+        },
+        {
+            "title": "Responsive Design: Mobile First Layout",
+            "institution": "Platzi",
+            "date": "06-2021",
+            "hours": 25,
+            "area": "Frontend",
+            "aptitudes": ["Mobile First", "CSS", "HTML"]
+        },
+        {
+            "title": "CSS Grid Layout",
+            "institution": "Platzi",
+            "date": "07-2021",
+            "hours": 20,
+            "area": "Frontend",
+            "aptitudes": ["CSS", "Grid Layout", "HTML"]
+        },
+        {
+            "title": "Definitive HTML and CSS",
+            "institution": "Platzi",
+            "date": "05-2021",
+            "hours": 23,
+            "area": "Frontend",
+            "aptitudes": ["HTML", "CSS", "Frontend"]
+        },
+        {
+            "title": "Basic Cybersecurity",
+            "institution": "Incibe",
+            "date": "12-2024",
+            "hours": 250,
+            "area": "Cybersecurity",
+            "aptitudes": ["Security", "Networks", "Ethical Hacking"]
+        },
+        {
+            "title": "Advanced Integrative Leadership",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 5,
+            "area": "Leadership",
+            "aptitudes": ["Leadership", "Team management", "Communication"]
+        },
+        {
+            "title": "Leadership, Influence and Executive Presence",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 7,
+            "area": "Leadership",
+            "aptitudes": ["Leadership", "Influence", "Communication"]
+        },
+        {
+            "title": "Intermediate Leadership from Contingency Theories",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 9,
+            "area": "Leadership",
+            "aptitudes": ["Leadership", "Team management"]
+        },
+        {
+            "title": "Influence and Persuasion Techniques",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 9,
+            "area": "Leadership",
+            "aptitudes": ["Persuasion", "Communication", "Negotiation", "Influence"]
+        },
+        {
+            "title": "Git and GitHub",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 24,
+            "area": "Software basis",
+            "aptitudes": ["Git", "GitHub", "Codespaces", "Github Actions"]
+        },
+        {
+            "title": "Basic Programming",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 29,
+            "area": "Software basis",
+            "aptitudes": ["Programming", "Algorithms", "Logic"]
+        },
+        {
+            "title": "Object-Oriented Programming with C++",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 12,
+            "area": "Programming Languages",
+            "aptitudes": ["OOP", "C++"]
+        },
+        {
+            "title": "Practical C++",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 23,
+            "area": "Programming Languages",
+            "aptitudes": ["C++"]
+        },
+        {
+            "title": "Basic C++",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 14,
+            "area": "Programming Languages",
+            "aptitudes": ["C++"]
+        },
+        {
+            "title": "Functions in C",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 10,
+            "area": "Programming Languages",
+            "aptitudes": ["C", "Functions"]
+        },
+        {
+            "title": "Control Flow in C",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 11,
+            "area": "Programming Languages",
+            "aptitudes": ["C"]
+        },
+        {
+            "title": "Introduction to C",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 12,
+            "area": "Programming Languages",
+            "aptitudes": ["C"]
+        },
+        {
+            "title": "Software Engineering Fundamentals",
+            "institution": "Platzi",
+            "date": "05-2025",
+            "hours": 15,
+            "area": "Software basis",
+            "aptitudes": []
+        },
+        {
+            "title": "Python: Comprehensions, Functions and Error Handling",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 21,
+            "area": "Programming Languages",
+            "aptitudes": ["Python", "Functions", "Errors", "Comprehensions"]
+        },
+        {
+            "title": "Logical Thinking: Algorithms and Flowcharts",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 12,
+            "area": "Software basis",
+            "aptitudes": ["Logic", "Algorithms"]
+        },
+        {
+            "title": "Mathematics Fundamentals",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 13,
+            "area": "Software basis",
+            "aptitudes": ["Mathematics", "Algebra", "Logic"]
+        },
+        {
+            "title": "Introduction to the Terminal and Command Line",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 11,
+            "area": "Software basis",
+            "aptitudes": ["Bash", "Commands", "CMD"]
+        },
+        {
+            "title": "Basic Computing",
+            "institution": "Platzi",
+            "date": "04-2025",
+            "hours": 14,
+            "area": "Software basis",
+            "aptitudes": []
+        },
+        {
+            "title": "Practical Python: Building a CRUD",
+            "institution": "Platzi",
+            "date": "10-2021",
+            "hours": 21,
+            "area": "Programming Languages",
+            "aptitudes": ["Python", "CRUD"]
+        },
+        {
+            "title": "Professional Python",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 15,
+            "area": "Programming Languages",
+            "aptitudes": ["Python"]
+        },
+        {
+            "title": "Introduction to Selenium with Python",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 19,
+            "area": "Programming Languages",
+            "aptitudes": ["Selenium", "Python"]
+        },
+        {
+            "title": "Algorithmic Complexity with Python",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 13,
+            "area": "Programming Languages",
+            "aptitudes": ["Algorithms", "Python", "Big O"]
+        },
+        {
+            "title": "Introduction to Computational Thinking with Python",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 13,
+            "area": "Programming Languages",
+            "aptitudes": ["Python", "Logic", "Algorithms"]
+        },
+        {
+            "title": "Object-Oriented Programming",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 20,
+            "area": "Software basis",
+            "aptitudes": ["OPP"]
+        },
+        {
+            "title": "OOP and Algorithms in Python",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 16,
+            "area": "Programming Languages",
+            "aptitudes": ["Python", "OPP", "Algorithms", "Data Structures"]
+        },
+        {
+            "title": "Basic Python",
+            "institution": "Platzi",
+            "date": "07-2021",
+            "hours": 16,
+            "area": "Programming Languages",
+            "aptitudes": ["Python"]
+        },
+        {
+            "title": "Professional Git and GitHub",
+            "institution": "Platzi",
+            "date": "05-2021",
+            "hours": 22,
+            "area": "Software basis",
+            "aptitudes": ["Git", "GitHub"]
+        },
+        {
+            "title": "Database Fundamentals",
+            "institution": "Platzi",
+            "date": "09-2021",
+            "hours": 26,
+            "area": "Data Bases",
+            "aptitudes": ["SQL", "MySQL"]
+        },
+        {
+            "title": "Introduction to 3D Video Game Programming with Unity",
+            "institution": "Platzi",
+            "date": "04-2024",
+            "hours": 7,
+            "area": "Videogames",
+            "aptitudes": ["Unity", "C#", "3D"]
+        },
+        {
+            "title": "Notion",
+            "institution": "Platzi",
+            "date": "06-2025",
+            "hours": 29,
+            "area": "Others",
+            "aptitudes": ["Notion"]
         }
     ]
 }
