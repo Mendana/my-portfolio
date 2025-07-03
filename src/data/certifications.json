@@ -1,7 +1,7 @@
 {
     "certifications": [
         {
-            "title": "Curso de Introducción a Machine Learning",
+            "title": "Introducción a Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
             "hours": 9,
@@ -9,7 +9,7 @@
             "aptitudes": ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
         },
         {
-            "title": "Curso de Fundamentos de IA Para Data Y Machine Learning",
+            "title": "Fundamentos de IA Para Data Y Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
             "hours": 17,
@@ -17,7 +17,7 @@
             "aptitudes": ["Python", "IA", "ML"]
         },
         {
-            "title": "Curso de Manejo de Datos Faltantes: Imputación",
+            "title": "Manejo de Datos Faltantes: Imputación",
             "institution": "Platzi",
             "date": "06-2025",
             "hours": 11,
@@ -25,7 +25,7 @@
             "aptitudes": ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
         },
         {
-            "title": "Curso de Manejo de Datos Faltantes: Detección y Exploración",
+            "title": "Manejo de Datos Faltantes: Detección y Exploración",
             "institution": "Platzi",
             "date": "06-2025",
             "hours": 11,

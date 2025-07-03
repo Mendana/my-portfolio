@@ -1,10 +1,14 @@
+import { useState } from "react";
 import FormalEducationItem from "./FormalEducationItem";
 import formalEducation from "../data/formalEducation.json";
 import certifications from "../data/certifications.json";
 import { FaBookOpen } from "react-icons/fa6";
 import CourseView from "./CourseView";
+import CoursesModal from "./CoursesModal";
 
 function Education() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const getNumCourses = () => {
         return certifications.certifications.length;
     }
@@ -38,14 +42,19 @@ function Education() {
             <section className="mt-16">
                 <div className="flex flex-col">
                     <div>
-                        <h3 className="text-4xl font-semibold lg:text-5xl text-[var(--text-primary)] md:mb-16">CERTIFICATIONS</h3>
-                        <p className="main-text">{getNumCourses()} completed courses • Latests:</p>
+                        <h3 className="text-4xl font-semibold lg:text-5xl text-[var(--text-primary)] mt-8 md:mb-16">CERTIFICATIONS</h3>
+                        <p className="mt-4 mb-4 text-[var(--text-tertiary)] text-[1.4rem]">{getNumCourses()} completed courses • Latests:</p>
                     </div>
                     <div>
-                        <button><FaBookOpen/>View All Courses</button>
+                        <button 
+                            className="education__all-courses-btn"
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            <FaBookOpen size={16}/>View All Courses
+                        </button>
                     </div>
                 </div>
-                <div>
+                <div className="mt-8 flex flex-col gap-8">
                     {getLatestsCourses().map((course, index) => (
                         <CourseView 
                             key={index}
@@ -59,6 +68,12 @@ function Education() {
                     ))}
                 </div>
             </section>
+
+            {/* Modal para todos los cursos */}
+            <CoursesModal 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)} 
+            />
         </div>
     );
 }
