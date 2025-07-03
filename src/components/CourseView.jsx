@@ -9,7 +9,7 @@ function CourseView({
     aptitudes,
 }) {
     return (
-        <div className="course-item p-6 border-1 border-[var(--border-secondary)] rounded-xl">
+        <div className="course-item p-6 rounded-xl">
             <section className="course-item__heading">
                 <span className="course-item__area">{area}</span>
                 <div className="course-item__date">

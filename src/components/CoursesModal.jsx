@@ -128,7 +128,7 @@ function CoursesModal({ isOpen, onClose }) {
             </div>
             
             {/* Courses List */}
-            <div className="mt-6 flex flex-col gap-6">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {courses.length > 0 ? (
                 courses.map((course, index) => (
                   <CourseView
@@ -142,7 +142,7 @@ function CoursesModal({ isOpen, onClose }) {
                   />
                 ))
               ) : (
-                <p className="text-center py-8 text-[1.4rem] text-gray-500">
+                <p className="text-center py-8 text-[1.4rem] text-gray-500 col-span-full">
                   No courses found matching your criteria.
                 </p>
               )}

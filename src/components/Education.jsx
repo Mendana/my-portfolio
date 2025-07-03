@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FormalEducationItem from "./FormalEducationItem";
 import formalEducation from "../data/formalEducation.json";
 import certifications from "../data/certifications.json";
 import { FaBookOpen } from "react-icons/fa6";
 import CourseView from "./CourseView";
 import CoursesModal from "./CoursesModal";
+import useWindowSize from "../hooks/useWindowSize";
 
 function Education() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [visibleCourses, setVisibleCourses] = useState(3);
+    const windowSize = useWindowSize();
+    
+    // Determinar el número de cursos a mostrar basado en el ancho de pantalla
+    useEffect(() => {
+        if (windowSize.width >= 640 && windowSize.width < 1024) {
+            setVisibleCourses(4);
+        } else {
+            setVisibleCourses(3);
+        }
+    }, [windowSize.width]);
 
     const getNumCourses = () => {
         return certifications.certifications.length;
@@ -15,8 +27,7 @@ function Education() {
 
     const getLatestsCourses = () => {
         const sortedCourses = certifications.certifications.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        return sortedCourses.slice(0, 3)
+        return sortedCourses.slice(0, visibleCourses);
     }
     
     return (
@@ -40,7 +51,7 @@ function Education() {
                 </div>
             </section>
             <section className="mt-16">
-                <div className="flex flex-col">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                     <div>
                         <h3 className="text-4xl font-semibold lg:text-5xl text-[var(--text-primary)] mt-8 md:mb-16">CERTIFICATIONS</h3>
                         <p className="mt-4 mb-4 text-[var(--text-tertiary)] text-[1.4rem]">{getNumCourses()} completed courses • Latests:</p>
@@ -54,7 +65,7 @@ function Education() {
                         </button>
                     </div>
                 </div>
-                <div className="mt-8 flex flex-col gap-8">
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {getLatestsCourses().map((course, index) => (
                         <CourseView 
                             key={index}
