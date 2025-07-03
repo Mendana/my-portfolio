@@ -35,7 +35,7 @@ function FormalEducationItem({
     }
 
     return (
-        <div className="education-item pl-4 border-l-2 border-[var(--text-primary)] mb-8 md:pl-8">
+        <div className="education-item pl-4 pr-2 border-l-2 border-[var(--text-primary)] mb-8 md:pl-8">
             <section className="flex flex-col education-item__heading mb-8 md:flex-row md:justify-between">
                 <h4>{title}</h4>
                 <span className={`${getStatusColor(status)} ${getTextColor(status)}`}>{status}</span>

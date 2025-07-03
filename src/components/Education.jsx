@@ -35,7 +35,7 @@ function Education() {
             <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>EDUCATION</h2>
             <p className="main-text">Continuos learning through formal education at university and self-study with online courses and books.</p>
             <section className="mt-16">
-                <h3 className="text-4xl font-semibold lg:text-5xl text-[var(--text-primary)] md:mb-16">FORMAL EDUCATION</h3>
+                <h3 className="text-4xl font-semibold text-[var(--text-primary)] md:mb-16">FORMAL EDUCATION</h3>
                 <div className="mt-8">
                     {formalEducation.education.map((item, index) => (
                         <FormalEducationItem
@@ -53,7 +53,7 @@ function Education() {
             <section className="mt-16">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                     <div>
-                        <h3 className="text-4xl font-semibold lg:text-5xl text-[var(--text-primary)] mt-8 md:mb-16">CERTIFICATIONS</h3>
+                        <h3 className="text-4xl font-semibold text-[var(--text-primary)] mt-8">CERTIFICATIONS</h3>
                         <p className="mt-4 mb-4 text-[var(--text-tertiary)] text-[1.4rem]">{getNumCourses()} completed courses • Latests:</p>
                     </div>
                     <div>

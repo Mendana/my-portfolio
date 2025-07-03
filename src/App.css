@@ -435,17 +435,42 @@
 
 .course-item__aptitudes {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 4px;
+    width: 100%;
 }
 
-.course-item__aptitudes span {
+.course-item__aptitude {
     padding: 4px 8px;
-    width: fit-content;
-    height: fit-content;
     background-color: var(--bg-tertiary);
     color: var(--text-secondary);
     border-radius: 4px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.course-item__more-btn,
+.course-item__less-btn {
+    padding: 4px 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-tertiary);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.course-item__more-btn:hover,
+.course-item__less-btn:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.course-item__less-btn {
+    margin-top: 4px;
+    align-self: flex-start;
 }
 
 /* Expertise section 

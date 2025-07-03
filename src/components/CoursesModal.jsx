@@ -77,7 +77,7 @@ function CoursesModal({ isOpen, onClose }) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl max-h-[85vh] overflow-y-auto rounded-xl z-[2001] p-6 shadow-2xl
+            className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl max-h-[85vh] md:max-w-[1150px] overflow-y-auto rounded-xl z-[2001] p-6 shadow-2xl
               ${isDark ? 'bg-[var(--dark-bg-primary)] text-[var(--dark-text-primary)]' : 'bg-[var(--bg-primary)] text-[var(--text-primary)]'}`}
             onClick={(e) => e.stopPropagation()}
           >
@@ -93,7 +93,7 @@ function CoursesModal({ isOpen, onClose }) {
             </div>
             
             {/* Filters */}
-            <div className="flex flex-col gap-4 mb-6 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-4 mb-6 md:flex-row md:items-center">
               {/* Search Input */}
               <div className="relative w-full md:w-1/2">
                 <input
