@@ -24,9 +24,26 @@ function ProjectView({
         }
     };
 
+    const handleProjectClick = () => {
+        // Solo navegar si hay un enlace válido
+        if (link && link !== '#') {
+            window.open(link, '_blank', 'noopener noreferrer');
+        }
+    };
+
     return (
-        <div className="project-view-container">
-            <img src={image} alt="project image" />
+        <div 
+            className="project-view-container" 
+            onClick={handleProjectClick}
+            role="button" 
+            tabIndex={0}
+            aria-label={`Ver proyecto ${title}`}
+            onKeyDown={(e) => {
+                // Permitir activación con tecla Enter para accesibilidad
+                if (e.key === 'Enter') handleProjectClick();
+            }}
+        >
+            <img src={image} alt={`Imagen del proyecto ${title}`} />
             <span className="project-status">
                 <span className={`status-indicator ${getStatusColor(status)}`}></span>
                 {status.charAt(0).toUpperCase() + status.slice(1)}
@@ -37,6 +54,7 @@ function ProjectView({
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="project-arrow"
+                onClick={(e) => e.stopPropagation()} // Evitar doble activación
             >
                 <FaArrowRight size={18} />
             </a>
@@ -48,7 +66,7 @@ function ProjectView({
                         <li key={index}>{tech}</li>
                     ))}
                 </ul>
-                <div display="flex flex-row">
+                <div className="flex flex-row items-center">
                     <p className="project-genre">{genre}</p>
                     <p>{year}</p>
                 </div>

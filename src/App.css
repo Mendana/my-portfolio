@@ -152,6 +152,38 @@
     display: grid;
     position: relative;
     margin-bottom: 52px;
+    border-bottom: 1.5px solid var(--border-primary);
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    cursor: pointer; /* Indicar que todo el componente es clickable */
+    border-radius: 8px; /* Añadir bordes redondeados */
+    padding-bottom: 24px;
+}
+
+.project-view-container:hover {
+    transform: scale(1.02);
+}
+
+.project-view-container:hover h4 {
+    color: var(--text-primary); /* Color más oscuro al hacer hover */
+    transition: color 0.3s ease;
+}
+
+.project-view-container:hover .project-arrow {
+    color: var(--text-primary); /* Cambiar color de la flecha al hacer hover */
+    transition: color 0.3s ease;
+}
+
+.project-view-container:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 4px;
+}
+
+/* Para mantener el foco en la flecha independientemente */
+.project-view-container .project-arrow:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+    border-radius: 50%;
 }
 
 .project-view-container img {
@@ -173,6 +205,7 @@
     font-weight: 500;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    transition: color 0.3s ease;
 }
 
 .project-view-container .project-arrow {
@@ -182,7 +215,7 @@
     grid-row: 2 / 3;
     align-self: center;
     justify-self: end;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .project-view-container .project-arrow:hover {
@@ -360,6 +393,13 @@
     font-weight: 300;
     border-radius: 8px;
     margin-block: 12px;
+}
+
+.education__all-courses-btn:hover {
+    cursor: pointer;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Course View */
@@ -639,6 +679,7 @@
 
 @media (min-width: 768px) {
     .project-view-container {
+        border-bottom: none;
         border-top: 1.5px solid var(--border-primary);
         padding-top: 32px;
         margin-top: 64px;
@@ -762,4 +803,15 @@
         gap: 12px;
         padding-bottom: 32px;
     }
+}
+
+/* Añadir al final del archivo */
+
+/* Safari-specific animations */
+@supports (-webkit-touch-callout: none) {
+  .animate-on-scroll {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    will-change: transform, opacity;
+  }
 }

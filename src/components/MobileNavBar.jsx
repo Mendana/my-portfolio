@@ -54,6 +54,14 @@ function MobileNavBar() {
                                 </a>
                             </li>
                             <li>
+                                <a href="#education" className={`${isDark ? 
+                                    'text-[var(--dark-text-primary)] hover:text-[var(--dark-text-tertiary)]' : 
+                                    'text-[var(--text-primary)] hover:text-[var(--text-tertiary)]'} 
+                                    transition-colors`}>
+                                    EDUCATION
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#about" className={`${isDark ? 
                                     'text-[var(--dark-text-primary)] hover:text-[var(--dark-text-tertiary)]' : 
                                     'text-[var(--text-primary)] hover:text-[var(--text-tertiary)]'} 

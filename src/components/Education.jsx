@@ -6,6 +6,7 @@ import { FaBookOpen } from "react-icons/fa6";
 import CourseView from "./CourseView";
 import CoursesModal from "./CoursesModal";
 import useWindowSize from "../hooks/useWindowSize";
+import AnimateOnScroll from './AnimateOnScroll';
 
 function Education() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,21 +33,35 @@ function Education() {
     
     return (
         <div>
-            <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>EDUCATION</h2>
-            <p className="main-text">Continuos learning through formal education at university and self-study with online courses and books.</p>
+            <AnimateOnScroll direction="fromLeft">
+                <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>EDUCATION</h2>
+            </AnimateOnScroll>
+            
+            <AnimateOnScroll direction="fromRight" delay={0.2}>
+                <p className="main-text">Continuos learning through formal education at university and self-study with online courses and books.</p>
+            </AnimateOnScroll>
+            
             <section className="mt-16">
-                <h3 className="text-4xl font-semibold text-[var(--text-primary)] md:mb-16">FORMAL EDUCATION</h3>
+                <AnimateOnScroll direction="fromLeft" delay={0.3}>
+                    <h3 className="text-4xl font-semibold text-[var(--text-primary)] md:mb-16">FORMAL EDUCATION</h3>
+                </AnimateOnScroll>
+                
                 <div className="mt-8">
                     {formalEducation.education.map((item, index) => (
-                        <FormalEducationItem
-                            key={index}
-                            title={item.title}
-                            status={item.status}
-                            institution={item.institution}
-                            startYear={item.startYear}
-                            endYear={item.endYear}
-                            description={item.description}
-                        />
+                        <AnimateOnScroll 
+                            key={index} 
+                            direction="fromBottom" 
+                            delay={0.1 * index}
+                        >
+                            <FormalEducationItem
+                                title={item.title}
+                                status={item.status}
+                                institution={item.institution}
+                                startYear={item.startYear}
+                                endYear={item.endYear}
+                                description={item.description}
+                            />
+                        </AnimateOnScroll>
                     ))}
                 </div>
             </section>
