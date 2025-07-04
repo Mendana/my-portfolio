@@ -55,16 +55,20 @@ function FormalExperienceItem({
             return "Duración desconocida";
         }
         
-        const duration = endDate - startDate;
+        // Cálculo contando meses extremos como completos
+        let years = endDate.getFullYear() - startDate.getFullYear();
+        let months = endDate.getMonth() - startDate.getMonth() + 1; // +1 para incluir el mes actual
         
-        const years = Math.floor(duration / (1000 * 60 * 60 * 24 * 365.25));
-        const months = Math.floor(
-            (duration % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44)
-        );
+        // Ajustar si el mes final es menor que el inicial
+        if (months <= 0) {
+            years--;
+            months += 12;
+        }
         
-        if (years === 0 && months === 0) {
-            return "Menos de un mes";
-        } else if (years === 0) {
+        // Eliminamos la comprobación de días ya que queremos contar los meses extremos completos
+        
+        // Formatear el resultado
+        if (years === 0) {
             return `${months} ${months === 1 ? "month" : "months"}`;
         } else if (months === 0) {
             return `${years} ${years === 1 ? "year" : "years"}`;
@@ -158,7 +162,7 @@ function FormalExperienceItem({
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
                 <p>{description}</p>
-                <span className="experience-item__achievements-title">Key Achievements</span>
+                {keyAchievements.length > 0 && <span className="experience-item__achievements-title">Key Achievements</span>}
                 <ul>
                     {keyAchievements.map((achievement, index) => (
                         <motion.li 

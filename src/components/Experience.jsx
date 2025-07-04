@@ -74,7 +74,7 @@ function Experience() {
                             direction="fromBottom" 
                             delay={0.1 * index}
                         >
-                            <div className="relative pl-[16px] border-l-2 pb-8 border-[var(--text-primary)] md:pl-[32px] md:border-l-3">
+                            <div className="relative pl-[16px] border-l-2 pb-8 pt-2 border-[var(--text-primary)] md:pl-[32px] md:border-l-3">
                                 <div className="absolute left-[-7px] top-[-2px] w-5 h-5 bg-[var(--text-primary)] rounded-full lg:left-[-7px] xl:left[-5px]" />
                                 <FormalExperienceItem
                                     title={item.title}
