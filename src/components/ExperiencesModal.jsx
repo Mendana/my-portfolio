@@ -88,10 +88,13 @@ function ExperiencesModal({ isOpen, onClose }) {
             className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl max-h-[85vh] md:max-w-[1150px] overflow-y-auto rounded-xl z-[2001] p-6 shadow-2xl
               ${isDark ? 'bg-[var(--dark-bg-primary)] text-[var(--dark-text-primary)]' : 'bg-[var(--bg-primary)] text-[var(--text-primary)]'}`}
             onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-3xl font-bold">All Experiences</h2>
+              <h2 id="modal-title" className="text-3xl font-bold">All Experiences</h2>
               <button 
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -105,16 +108,24 @@ function ExperiencesModal({ isOpen, onClose }) {
             <div className="flex flex-col gap-4 mb-6 md:flex-row md:items-center">
               {/* Search Input */}
               <div className="relative w-full md:w-1/2">
+                <label htmlFor="experience-search" className="sr-only">
+                  Search experiences
+                </label>
                 <input
+                  id="experience-search"
                   type="text"
                   placeholder="Search experiences, companies, or technologies..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  aria-describedby="search-description"
                   className={`text-xl w-full p-3 pl-4 rounded-lg border focus:outline-none focus:ring-2 focus:ring-opacity-50
                     ${isDark 
                       ? 'bg-[var(--dark-bg-secondary)] border-[var(--dark-border-primary)] focus:ring-[var(--dark-text-tertiary)]' 
                       : 'bg-white border-[var(--border-primary)] focus:ring-[var(--text-tertiary)]'}`}
                 />
+                <span id="search-description" className="sr-only">
+                  Type to filter experiences by title, company, description or technologies
+                </span>
               </div>
               
               {/* Type Filter */}
@@ -139,30 +150,35 @@ function ExperiencesModal({ isOpen, onClose }) {
             {/* Experiences List - Simples, sin borde ni punto */}
             <div className="mt-6 flex flex-col gap-8">
               {experiences.length > 0 ? (
-                experiences.map((exp, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="experience-modal-item p-4 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                  >
-                    <FormalExperienceItem
-                      title={exp.title}
-                      jobType={exp.jobType}
-                      workingDay={exp.workingDay}
-                      company={exp.company}
-                      startDate={exp.startDate}
-                      endDate={exp.endDate}
-                      description={exp.description}
-                      keyAchievements={exp.keyAchievements}
-                      technologies={exp.technologies}
-                      location={exp.location}
-                    />
-                  </motion.div>
-                ))
+                <>
+                  <div className="sr-only" aria-live="polite">
+                    {experiences.length} experiences found.
+                  </div>
+                  {experiences.map((exp, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="experience-modal-item p-4 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                    >
+                      <FormalExperienceItem
+                        title={exp.title}
+                        jobType={exp.jobType}
+                        workingDay={exp.workingDay}
+                        company={exp.company}
+                        startDate={exp.startDate}
+                        endDate={exp.endDate}
+                        description={exp.description}
+                        keyAchievements={exp.keyAchievements}
+                        technologies={exp.technologies}
+                        location={exp.location}
+                      />
+                    </motion.div>
+                  ))}
+                </>
               ) : (
-                <p className="text-center py-8 text-[1.4rem] text-gray-500">
+                <p className="text-center py-8 text-[1.4rem] text-gray-500" aria-live="polite">
                   No experiences found matching your criteria.
                 </p>
               )}

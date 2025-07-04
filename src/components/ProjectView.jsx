@@ -43,7 +43,11 @@ function ProjectView({
                 if (e.key === 'Enter') handleProjectClick();
             }}
         >
-            <img src={image} alt={`Imagen del proyecto ${title}`} />
+            <img 
+              src={image} 
+              alt={`Captura del proyecto ${title} - ${description.substring(0, 50)}...`} 
+              loading="lazy"  // Carga lazy para mejorar rendimiento
+            />
             <span className="project-status">
                 <span className={`status-indicator ${getStatusColor(status)}`}></span>
                 {status.charAt(0).toUpperCase() + status.slice(1)}
