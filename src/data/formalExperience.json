@@ -1,0 +1,51 @@
+{
+    "experiences": [
+        {
+            "title": "Frontend Developer",
+            "jobType": "Freelance",
+            "workingDay": "Full-time",
+            "company": "Universidad de Oviedo",
+            "startDate": "sep. 2023",
+            "endDate": "Present",
+            "description": "Developing modern web applications for small businesses and startups, focusing on React.js and responsive design.",
+            "keyAchievements": [
+                "Built 5+ responsive web applications",
+                "Improved user experience and performance",
+                "Improved client website performance by 40%"
+            ],
+            "technologies": ["React.js", "JavaScript", "CSS", "HTML"],
+            "location": "Remote"
+        },
+        {
+            "title": "Frontend Developer",
+            "jobType": "Freelance",
+            "workingDay": "Part-time",
+            "company": "Universidad de Oviedo",
+            "startDate": "sep. 2023",
+            "endDate": "Present",
+            "description": "Developing modern web applications for small businesses and startups, focusing on React.js and responsive design.",
+            "keyAchievements": [
+                "Built 5+ responsive web applications",
+                "Improved user experience and performance",
+                "Improved client website performance by 40%"
+            ],
+            "technologies": ["React.js", "JavaScript", "CSS", "HTML"],
+            "location": "Remote"
+        },
+        {
+            "title": "Frontend Developer",
+            "jobType": "Freelance",
+            "company": "Universidad de Oviedo",
+            "startDate": "sep. 2023",
+            "endDate": "Present",
+            "description": "Developing modern web applications for small businesses and startups, focusing on React.js and responsive design.",
+            "keyAchievements": [
+                "Built 5+ responsive web applications",
+                "Improved user experience and performance",
+                "Improved client website performance by 40%"
+            ],
+            "technologies": ["React.js", "JavaScript", "CSS", "HTML"],
+            "location": "Remote"
+        }
+    ]
+}

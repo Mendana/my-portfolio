@@ -45,6 +45,22 @@ const variants = {
         ease: [0.22, 1, 0.36, 1] 
       }
     }
+  },
+  fadeIn: {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
+    }
+  },
+  staggerChildren: {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { 
+        staggerChildren: 0.1
+      }
+    }
   }
 };
 

@@ -327,6 +327,128 @@
     background-color: var(--error); /* rojo */
 }
 
+/* Experience section */
+
+/* Experience item */
+/* Estilos para FormalExperienceItem similares a FormalEducationItem */
+
+.experience-item {
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--border-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border-radius: 8px;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.experience-item:hover {
+    background-color: var(--bg-secondary);
+    transform: scale(1.02);
+}
+
+
+.experience-item__basics {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.experience-item__job-label {
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.experience-item__title {
+    margin-top: 4px;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.experience-item__company {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.experience-item__dates {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.experience-item__info-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+}
+
+.experience-item__description {
+    margin-top: 1rem;
+}
+
+.experience-item__description p {
+    font-size: 1.4rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item__description span {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item__description .experience-item__achievements-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.experience-item__achievement {
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 10px; /* Espacio para el punto */
+}
+
+.experience-item__achievement::before {
+    content: "•"; /* Punto como contenido */
+    position: absolute;
+    left: -1px;
+    top: -3px;
+    font-size: 1.6rem;
+    color: var(--text-tertiary); /* Color del punto */
+}
+
+.experience-item__technologies {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience-item__technology {
+    padding: 4px 8px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
 /* Education section */
 .education-item {
     padding-block: 8px;
@@ -723,6 +845,11 @@
         grid-row: 1 / 2;
     }
 
+    .experience-item__heading {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .list-expertise {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
@@ -804,8 +931,6 @@
         padding-bottom: 32px;
     }
 }
-
-/* Añadir al final del archivo */
 
 /* Safari-specific animations */
 @supports (-webkit-touch-callout: none) {

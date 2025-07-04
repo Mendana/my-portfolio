@@ -18,6 +18,14 @@ function DesktopNavBar() {
                     </a>
                 </li>
                 <li>
+                    <a href="#experience" 
+                        className={`md:text-xl lg:text-2xl transition-colors ${isDark ? 
+                            'text-[var(--dark-text-primary)] hover:text-[var(--dark-text-tertiary)]' : 
+                            'text-[var(--text-primary)] hover:text-[var(--text-tertiary)]'}`}>
+                        EXPERIENCE
+                    </a>
+                </li>
+                <li>
                     <a href="#education" 
                         className={`md:text-xl lg:text-2xl transition-colors ${isDark ? 
                             'text-[var(--dark-text-primary)] hover:text-[var(--dark-text-tertiary)]' : 

@@ -9,6 +9,12 @@ import { Typewriter } from 'react-simple-typewriter';
 import projectsData from '../data/projects.json';
 import Education from './Education';
 import AnimateOnScroll from './AnimateOnScroll';
+import Experience from './Experience';
+import { lazy, Suspense } from 'react';
+
+// Cargar componentes pesados de forma perezosa
+const CoursesModal = lazy(() => import('./CoursesModal'));
+const ExperiencesModal = lazy(() => import('./ExperiencesModal'));
 
 function AppContent() {
     const { isDark } = useTheme();
@@ -106,6 +112,12 @@ function AppContent() {
                 </AnimateOnScroll>
               ))}
             </div>
+          </section>
+
+          <section id='experience' className='mb-80'>
+            <AnimateOnScroll direction="fromLeft">
+              <Experience />
+            </AnimateOnScroll>
           </section>
 
           <section id='education' className='mb-80'>
