@@ -1,9 +1,12 @@
 import { MdWork } from "react-icons/md";
 import formalExperience from "../data/formalExperience.json";
 import FormalExperienceItem from "./FormalExperienceItem";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import AnimateOnScroll from './AnimateOnScroll';
-import ExperiencesModal from "./ExperiencesModal";
+import LoadingSpinner from './LoadingSpinner';
+
+// Importación dinámica
+const ExperiencesModal = lazy(() => import('./ExperiencesModal'));
 
 function Experience() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,11 +97,13 @@ function Experience() {
                 </div>
             </section>
             
-            {/* Modal para todas las experiencias */}
-            <ExperiencesModal 
-                isOpen={isModalOpen} 
-                onClose={() => setIsModalOpen(false)} 
-            />
+            {/* Modal para todas las experiencias - Con el spinner personalizado */}
+            <Suspense fallback={<LoadingSpinner />}>
+                <ExperiencesModal 
+                    isOpen={isModalOpen} 
+                    onClose={() => setIsModalOpen(false)} 
+                />
+            </Suspense>
         </div>
     );
 }

@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import FormalEducationItem from "./FormalEducationItem";
 import formalEducation from "../data/formalEducation.json";
 import certifications from "../data/certifications.json";
 import { FaBookOpen } from "react-icons/fa6";
 import CourseView from "./CourseView";
-import CoursesModal from "./CoursesModal";
 import useWindowSize from "../hooks/useWindowSize";
 import AnimateOnScroll from './AnimateOnScroll';
+import LoadingSpinner from './LoadingSpinner';
+
+// Importación dinámica
+const CoursesModal = lazy(() => import('./CoursesModal'));
 
 function Education() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -95,11 +98,13 @@ function Education() {
                 </div>
             </section>
 
-            {/* Modal para todos los cursos */}
-            <CoursesModal 
-                isOpen={isModalOpen} 
-                onClose={() => setIsModalOpen(false)} 
-            />
+            {/* Modal para todos los cursos - Con el spinner personalizado */}
+            <Suspense fallback={<LoadingSpinner />}>
+                <CoursesModal 
+                    isOpen={isModalOpen} 
+                    onClose={() => setIsModalOpen(false)} 
+                />
+            </Suspense>
         </div>
     );
 }
