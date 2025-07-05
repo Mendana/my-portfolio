@@ -97,7 +97,7 @@ function ExperiencesModal({ isOpen, onClose }) {
               <h2 id="modal-title" className="text-3xl font-bold">All Experiences</h2>
               <button 
                 onClick={onClose}
-                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                 aria-label="Cerrar modal"
               >
                 <IoClose size={24} />

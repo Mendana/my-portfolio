@@ -86,7 +86,7 @@ function CoursesModal({ isOpen, onClose }) {
               <h2 className="text-3xl font-bold">All Certifications</h2>
               <button 
                 onClick={onClose}
-                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 <IoClose size={24} />
               </button>
