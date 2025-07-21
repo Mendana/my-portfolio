@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "JavaScript: DOM Manipulation",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 16,
+            "area": "Frontend",
+            "aptitudes": ["JavaScript", "DOM", "HTML"]
+        },
+        {
             "title": "Applied Linear Algebra for Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
