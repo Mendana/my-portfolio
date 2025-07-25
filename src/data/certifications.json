@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Logistic regression with Python and Scikit-Learn",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 10,
+            "area": "ML/AI",
+            "aptitudes": ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn"]
+        },
+        {
             "title": "Linear regression with Python and Scikit-Learn",
             "institution": "Platzi",
             "date": "07-2025",
