@@ -171,6 +171,7 @@
 
 .project-view-container:hover .project-arrow {
     color: var(--text-primary); /* Cambiar color de la flecha al hacer hover */
+    transform: rotate(45deg);
     transition: color 0.3s ease;
 }
 
@@ -210,17 +211,23 @@
 
 .project-view-container .project-arrow {
     color: var(--text-tertiary);
-    rotate: 315deg;
+    display: inline-block;
+    transform: rotate(315deg);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     align-self: center;
     justify-self: end;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.5s ease, color 0.3s ease; /* Hacemos que coincida con el timing del contenedor */
 }
 
 .project-view-container .project-arrow:hover {
     cursor: pointer;
-    transform: rotate(45deg);
+}
+
+.project-view-container:hover .project-arrow {
+    color: var(--text-primary);
+    transform: rotate(0deg);
+    transition: transform 0.5s ease, color 0.3s ease;
 }
 
 .project-view-container article {
