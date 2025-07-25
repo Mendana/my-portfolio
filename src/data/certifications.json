@@ -73,6 +73,14 @@
             "aptitudes": ["Pandas", "Data Analysis", "NumPy", "Matplotlib"]
         },
         {
+            "title": "Mathematical Language and Notation",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 12,
+            "area": "Software basis",
+            "aptitudes": ["Mathematics", "Logic", "Algebra"]
+        },
+        {
             "title": "Professional Environment Setup for Data Science",
             "institution": "Platzi",
             "date": "06-2025",
