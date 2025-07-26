@@ -25,12 +25,36 @@
             "aptitudes": ["JavaScript", "DOM", "HTML"]
         },
         {
+            "title": "Basic Differential Calculus for Data Science and AI ",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 13,
+            "area": "Software basis",
+            "aptitudes": ["Derivation", "Optimization", "Limits"]
+        },
+        {
             "title": "Applied Linear Algebra for Machine Learning",
             "institution": "Platzi",
             "date": "07-2025",
             "hours": 8,
             "area": "ML/AI",
             "aptitudes": ["SVD", "PCA", "NumPy"]
+        },
+        {
+            "title": "Linear Algebra with Python",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 18,
+            "area": "Software basis",
+            "aptitudes": ["Tensors", "NumPy"]
+        },
+        {
+            "title": "Descriptive Statistics",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 16,
+            "area": "Software basis",
+            "aptitudes": ["Google Sheets"]
         },
         {
             "title": "Machine Learning Fundamentals",
