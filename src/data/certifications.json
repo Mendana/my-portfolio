@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Decision Trees and Random Forest with Python and Scikit-Learn",
+            "institution": "Platzi",
+            "date": "07-2025",
+            "hours": 12,
+            "area": "ML/AI",
+            "aptitudes": ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn"]
+        },
+        {
             "title": "Logistic regression with Python and Scikit-Learn",
             "institution": "Platzi",
             "date": "07-2025",
