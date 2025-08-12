@@ -99,7 +99,7 @@ function CourseView({
                                     className="course-item__more-btn"
                                     onClick={() => setIsExpanded(true)}
                                 >
-                                    +{hiddenAptitudes.length} más
+                                    +{hiddenAptitudes.length} more
                                 </button>
                             )}
                         </>
@@ -111,7 +111,7 @@ function CourseView({
                         className="course-item__less-btn mt-2"
                         onClick={() => setIsExpanded(false)}
                     >
-                        Mostrar menos
+                        Show less
                     </button>
                 )}
             </section>
