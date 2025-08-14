@@ -9,6 +9,14 @@
             "aptitudes": ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn"]
         },
         {
+            "title": "ECMAScript: History and Versions of JavaScript",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 26,
+            "area": "Programming Languages",
+            "aptitudes": ["JavaScript", "ECMAScript"]
+        },
+        {
             "title": "Java",
             "institution": "Platzi",
             "date": "08-2025",
