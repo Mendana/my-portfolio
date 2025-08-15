@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Professional Machine Learning with Scikit-Learn",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 20,
+            "area": "ML/AI",
+            "aptitudes": ["Scikit-learn", "Joblib", "Pandas", "PCA"]
+        },
+        {
             "title": "Clustering with Python and Scikit-Learn",
             "institution": "Platzi",
             "date": "08-2025",
