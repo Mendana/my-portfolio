@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "NPM: Managing JavaScript Packages and Dependencies",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 12,
+            "area": "Frontend",
+            "aptitudes": ["NPM", "JavaScript"]
+        },
+        {
             "title": "Professional Machine Learning with Scikit-Learn",
             "institution": "Platzi",
             "date": "08-2025",
