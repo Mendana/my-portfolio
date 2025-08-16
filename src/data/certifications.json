@@ -17,6 +17,14 @@
             "aptitudes": ["Scikit-learn", "Joblib", "Pandas", "PCA"]
         },
         {
+            "title": "Introduction to Web Packagers",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 18,
+            "area": "Frontend",
+            "aptitudes": ["Webpack", "Vite", "Parcel", "Rollup", "ESBuild"]
+        },
+        {
             "title": "Clustering with Python and Scikit-Learn",
             "institution": "Platzi",
             "date": "08-2025",
