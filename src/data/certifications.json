@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Creating Web Pages with Astro",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 20,
+            "area": "Frontend",
+            "aptitudes": ["Astro", "JavaScript", "TypeScript"]
+        },
+        {
             "title": "NPM: Managing JavaScript Packages and Dependencies",
             "institution": "Platzi",
             "date": "08-2025",
