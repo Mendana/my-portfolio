@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "name": "Static Website for a Local Trail Running Race",
+            "description": "A static website built for a local trail running event with all the information about the course, registration, and results.",
+            "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
+            "image": "/images/trail-arbas.avif",
+            "link": "https://web-trail-valle-arbas.web.app/",
+            "genre": "Frontend",
+            "status": "Development",
+            "year": 2025
+        },
+        {
             "name": "Frontend - Admin Dashboard for Schedule Management",
             "description": "An interactive platform for managing schedules of the university's subjects, allowing administrators to create, update, and delete classes and manage student enrollments.",
             "technologies": ["React", "JavaScript", "Tailwind CSS"],
