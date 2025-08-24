@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Webpack",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 17,
+            "area": "Frontend",
+            "aptitudes": ["Webpack", "JavaScript"]
+        },
+        {
             "title": "Creating Web Pages with Astro",
             "institution": "Platzi",
             "date": "08-2025",
