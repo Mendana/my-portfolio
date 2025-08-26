@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Basics of Web Components with JavaScript",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 19,
+            "area": "Frontend",
+            "aptitudes": ["JavaScript", "HTML", "CSS", "Web Components"]
+        },
+        {
             "title": "Webpack",
             "institution": "Platzi",
             "date": "08-2025",
