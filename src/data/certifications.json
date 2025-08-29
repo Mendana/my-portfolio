@@ -1,6 +1,30 @@
 {
     "certifications": [
         {
+            "title": "Web Optimization",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 27,
+            "area": "Frontend",
+            "aptitudes": ["JavaScript", "HTML", "CSS", "SSG", "SSR"]
+        },
+        {
+            "title": "Professional Neural networks with TensorFlow",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 16,
+            "area": "ML/AI",
+            "aptitudes": ["Neural Networks", "TensorFlow", "Keras", "Deep Learning"]
+        },
+        {
+            "title": "Vite.js",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 18,
+            "area": "Frontend",
+            "aptitudes": ["Vite", "JavaScript"]
+        },
+        {
             "title": "SPA with Vanilla JavaScript",
             "institution": "Platzi",
             "date": "08-2025",
