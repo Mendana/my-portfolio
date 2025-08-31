@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Solid.js",
+            "institution": "Platzi",
+            "date": "08-2025",
+            "hours": 13,
+            "area": "Frontend",
+            "aptitudes": ["Solid", "React", "JavaScript"]
+        },
+        {
             "title": "Web Optimization",
             "institution": "Platzi",
             "date": "08-2025",
