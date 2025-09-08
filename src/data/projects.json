@@ -1,13 +1,23 @@
 {
     "projects": [
         {
-            "name": "Static Website for a Local Trail Running Race",
+            "name": "MathTexpedia Frontend Design and Development",
+            "description": "A web application that provides mathematical resources and tools for students and educators, featuring LaTeX rendering and pdf notes.",
+            "technologies": ["Next", "TypeScript", "Shadcn", "Tailwind CSS", "React"],
+            "image": "/images/mathtexpedia.avif",
+            "link": "https://mathtexpedia.es/",
+            "genre": "Frontend",
+            "status": "Development",
+            "year": 2025
+        },
+        {
+            "name": "Arbas Trail Running Event Static Website",
             "description": "A static website built for a local trail running event with all the information about the course, registration, and results.",
             "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
             "image": "/images/trail-arbas.avif",
             "link": "https://web-trail-valle-arbas.web.app/",
             "genre": "Frontend",
-            "status": "Development",
+            "status": "Live",
             "year": 2025
         },
         {
