@@ -1,6 +1,22 @@
 {
     "certifications": [
         {
+            "title": "React.js",
+            "institution": "Platzi",
+            "date": "09-2025",
+            "hours": 19,
+            "area": "Frontend",
+            "aptitudes": ["React", "JavaScript", "TypeScript"]
+        },
+        {
+            "title": "Svelte",
+            "institution": "Platzi",
+            "date": "09-2025",
+            "hours": 13,
+            "area": "Frontend",
+            "aptitudes": ["Svelte", "JavaScript"]
+        },
+        {
             "title": "Solid.js",
             "institution": "Platzi",
             "date": "08-2025",
