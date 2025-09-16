@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "React.js: Render and Composition Patterns",
+            "institution": "Platzi",
+            "date": "09-2025",
+            "hours": 15,
+            "area": "Frontend",
+            "aptitudes": ["React", "JavaScript", "HOC", "Render Props"]
+        },
+        {
             "title": "React.js",
             "institution": "Platzi",
             "date": "09-2025",
