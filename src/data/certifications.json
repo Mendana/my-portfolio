@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Deep Learning with TensorFlow and Keras",
+            "institution": "Platzi",
+            "date": "09-2025",
+            "hours": 9,
+            "area": "ML/AI",
+            "aptitudes": ["Deep Learning", "TensorFlow", "Keras", "Python"]
+        },
+        {
             "title": "React.js: Render and Composition Patterns",
             "institution": "Platzi",
             "date": "09-2025",
@@ -41,7 +49,7 @@
             "aptitudes": ["JavaScript", "HTML", "CSS", "SSG", "SSR"]
         },
         {
-            "title": "Professional Neural networks with TensorFlow",
+            "title": "Professional Neural Networks with TensorFlow",
             "institution": "Platzi",
             "date": "08-2025",
             "hours": 16,
