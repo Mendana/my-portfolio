@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Neural Networks with PyTorch",
+            "institution": "Platzi",
+            "date": "09-2025",
+            "hours": 12,
+            "area": "ML/AI",
+            "aptitudes": ["Deep Learning", "PyTorch", "Neural Networks", "Python"]
+        },
+        {
             "title": "Deep Learning with TensorFlow and Keras",
             "institution": "Platzi",
             "date": "09-2025",
