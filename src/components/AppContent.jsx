@@ -11,6 +11,7 @@ import Education from './Education';
 import AnimateOnScroll from './AnimateOnScroll';
 import Experience from './Experience';
 
+
 function AppContent() {
     const { isDark } = useTheme();
 

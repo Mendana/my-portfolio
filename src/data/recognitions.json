@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Ponencia en TechConf 2024",
+    "type": "event",
+    "organization": "TechConf Spain",
+    "date": "2024-09-15",
+    "description": "Charla sobre desarrollo web moderno con React y optimización de rendimiento",
+    "location": "Madrid, España",
+    "certificate": null
+  },
+  {
+    "id": 2,
+    "title": "Hackathon Winner",
+    "type": "award",
+    "organization": "DevHacks",
+    "date": "2024-06-20",
+    "description": "Primer lugar en hackathon de 48 horas desarrollando una aplicación de IA",
+    "location": "Online",
+    "certificate": "/pdf/hackathon-certificate.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Participación en Open Source Day",
+    "type": "event",
+    "organization": "GitHub",
+    "date": "2024-05-10",
+    "description": "Contribución activa en proyectos open source durante el evento anual",
+    "location": "Barcelona, España",
+    "certificate": null
+  },
+  {
+    "id": 4,
+    "title": "Mentor en Code Academy",
+    "type": "volunteer",
+    "organization": "Code Academy Spain",
+    "date": "2024-03-01",
+    "description": "Mentoría a estudiantes principiantes en programación web",
+    "location": "Valencia, España",
+    "certificate": null
+  }
+]
