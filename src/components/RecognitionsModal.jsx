@@ -1,104 +1,168 @@
-import { Modal } from 'flowbite-react';
-import { HiCalendar, HiLocationMarker, HiUsers, HiPresentationChartLine, HiHeart, HiX } from 'react-icons/hi';
-import { HiTrophy } from 'react-icons/hi2';
+import { useEffect, useState } from 'react';
+import { IoClose } from "react-icons/io5";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from '../context/ThemeContext';
+import RecognitionView from "./RecognitionView";
 
-const RecognitionsModal = ({ isOpen, onClose, recognitions }) => {
-  const getTypeIcon = (type) => {
-    switch (type) {
-      case 'event':
-        return <HiPresentationChartLine className="w-5 h-5" />;
-      case 'award':
-        return <HiTrophy className="w-5 h-5" />;
-      case 'volunteer':
-        return <HiHeart className="w-5 h-5" />;
-      default:
-        return <HiUsers className="w-5 h-5" />;
+function RecognitionsModal({ isOpen, onClose, recognitions }) {
+  const { isDark } = useTheme();
+  const [filteredRecognitions, setFilteredRecognitions] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedType, setSelectedType] = useState("All");
+
+  // Get unique types from recognitions
+  const types = ["All", ...new Set(recognitions.map(recognition => recognition.type))];
+
+  useEffect(() => {
+    // Filter recognitions based on search term and selected type
+    let filtered = recognitions;
+    
+    if (searchTerm) {
+      const searchTermLower = searchTerm.toLowerCase();
+      filtered = filtered.filter(recognition => 
+        // Buscar en título
+        recognition.title.toLowerCase().includes(searchTermLower) ||
+        // Buscar en organización
+        recognition.organization.toLowerCase().includes(searchTermLower) ||
+        // Buscar en descripción
+        recognition.description.toLowerCase().includes(searchTermLower) ||
+        // Buscar en ubicación
+        (recognition.location && recognition.location.toLowerCase().includes(searchTermLower))
+      );
     }
-  };
+    
+    if (selectedType !== "All") {
+      filtered = filtered.filter(recognition => 
+        recognition.type === selectedType
+      );
+    }
+
+    // Sort recognitions by date (newest first)
+    filtered = filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    setFilteredRecognitions(filtered);
+  }, [searchTerm, selectedType, recognitions]);
+
+  // Prevent scrolling when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const getTypeLabel = (type) => {
     switch (type) {
       case 'event':
-        return 'Evento';
+        return 'Event';
       case 'award':
-        return 'Premio';
+        return 'Award';
       case 'volunteer':
-        return 'Voluntariado';
+        return 'Volunteer';
       default:
-        return 'Otro';
+        return 'Other';
     }
   };
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
-  };
-
   return (
-    <Modal show={isOpen} onClose={onClose} size="4xl">
-      <Modal.Header className="dark:bg-gray-800 dark:border-gray-700">
-        Todos los Reconocimientos
-      </Modal.Header>
-      <Modal.Body className="dark:bg-gray-800 max-h-[70vh] overflow-y-auto">
-        <div className="space-y-4">
-          {recognitions.map((recognition, index) => (
-            <div
-              key={recognition.id}
-              className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow duration-300 dark:bg-gray-700"
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300">
-                  {getTypeIcon(recognition.type)}
-                </div>
-                <div className="flex-1">
-                  <span className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase">
-                    {getTypeLabel(recognition.type)}
-                  </span>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mt-1">
-                    {recognition.title}
-                  </h3>
-                </div>
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[2000]"
+            onClick={onClose}
+          />
+          
+          {/* Modal */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl max-h-[85vh] md:max-w-[1150px] overflow-y-auto rounded-xl z-[2001] p-6 shadow-2xl
+              ${isDark ? 'bg-[var(--dark-bg-primary)] text-[var(--dark-text-primary)]' : 'bg-[var(--bg-primary)] text-[var(--text-primary)]'}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold">All Recognitions</h2>
+              <button 
+                onClick={onClose}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              >
+                <IoClose size={24} />
+              </button>
+            </div>
+            
+            {/* Filters */}
+            <div className="flex flex-col gap-4 mb-6 md:flex-row md:items-center">
+              {/* Search Input */}
+              <div className="relative w-full md:w-1/2">
+                <input
+                  type="text"
+                  placeholder="Search recognitions or organizations..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className={`text-xl w-full p-3 pl-4 rounded-lg border focus:outline-none focus:ring-2 focus:ring-opacity-50
+                    ${isDark 
+                      ? 'bg-[var(--dark-bg-secondary)] border-[var(--dark-border-primary)] focus:ring-[var(--dark-text-tertiary)]' 
+                      : 'bg-white border-[var(--border-primary)] focus:ring-[var(--text-tertiary)]'}`}
+                />
               </div>
-
-              <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-3">
-                <div className="flex items-center gap-2">
-                  <HiUsers className="w-4 h-4" />
-                  <span className="font-medium">{recognition.organization}</span>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <HiCalendar className="w-4 h-4" />
-                  <span>{formatDate(recognition.date)}</span>
-                </div>
-
-                {recognition.location && (
-                  <div className="flex items-center gap-2">
-                    <HiLocationMarker className="w-4 h-4" />
-                    <span>{recognition.location}</span>
-                  </div>
-                )}
-              </div>
-
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
-                {recognition.description}
-              </p>
-
-              {recognition.certificate && (
-                <a
-                  href={recognition.certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-3 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+              
+              {/* Type Filter */}
+              <div className="w-full md:w-auto">
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className={`text-xl w-full md:w-auto p-3 rounded-lg border appearance-none focus:outline-none focus:ring-2 focus:ring-opacity-50
+                    ${isDark 
+                      ? 'bg-[var(--dark-bg-secondary)] border-[var(--dark-border-primary)] focus:ring-[var(--dark-text-tertiary)]' 
+                      : 'bg-white border-[var(--border-primary)] focus:ring-[var(--text-tertiary)]'}`}
                 >
-                  Ver certificado →
-                </a>
+                  {types.map((type) => (
+                    <option key={type} value={type}>
+                      {type === "All" ? "All Types" : getTypeLabel(type)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            
+            {/* Recognitions List */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredRecognitions.length > 0 ? (
+                filteredRecognitions.map((recognition) => (
+                  <RecognitionView
+                    key={recognition.id}
+                    title={recognition.title}
+                    organization={recognition.organization}
+                    date={recognition.date}
+                    type={recognition.type}
+                    location={recognition.location}
+                    description={recognition.description}
+                    certificate={recognition.certificate}
+                  />
+                ))
+              ) : (
+                <p className="text-center py-8 text-[1.4rem] text-gray-500 col-span-full">
+                  No recognitions found matching your criteria.
+                </p>
               )}
             </div>
-          ))}
-        </div>
-      </Modal.Body>
-    </Modal>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
-};
+}
 
 export default RecognitionsModal;

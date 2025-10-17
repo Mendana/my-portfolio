@@ -6,6 +6,7 @@ import recognitions from "../data/recognitions.json";
 import { FaBookOpen } from "react-icons/fa6";
 import { FaAward } from "react-icons/fa";
 import CourseView from "./CourseView";
+import RecognitionView from "./RecognitionView";
 import useWindowSize from "../hooks/useWindowSize";
 import AnimateOnScroll from './AnimateOnScroll';
 import LoadingSpinner from './LoadingSpinner';
@@ -48,24 +49,6 @@ function Education() {
     const getLatestsRecognitions = () => {
         const sortedRecognitions = [...recognitions].sort((a, b) => new Date(b.date) - new Date(a.date));
         return sortedRecognitions.slice(0, visibleRecognitions);
-    }
-
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
-    }
-
-    const getTypeLabel = (type) => {
-        switch (type) {
-            case 'event':
-                return 'Event';
-            case 'award':
-                return 'Award';
-            case 'volunteer':
-                return 'Volunteer';
-            default:
-                return 'Other';
-        }
     }
     
     return (
@@ -151,46 +134,15 @@ function Education() {
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {getLatestsRecognitions().map((recognition, index) => (
                         <AnimateOnScroll key={recognition.id} delay={0.1 * index}>
-                            <div className="p-6 rounded-lg border border-[var(--border-color)] bg-[var(--card-bg)] hover:shadow-lg transition-all duration-300">
-                                <div className="flex items-start justify-between mb-3">
-                                    <span className="text-xs font-semibold text-[var(--accent-color)] uppercase tracking-wide">
-                                        {getTypeLabel(recognition.type)}
-                                    </span>
-                                </div>
-                                
-                                <h4 className="text-xl font-bold text-[var(--text-primary)] mb-2">
-                                    {recognition.title}
-                                </h4>
-                                
-                                <p className="text-[var(--text-secondary)] font-medium mb-2">
-                                    {recognition.organization}
-                                </p>
-                                
-                                <div className="flex items-center gap-2 text-sm text-[var(--text-tertiary)] mb-3">
-                                    <span>{formatDate(recognition.date)}</span>
-                                    {recognition.location && (
-                                        <>
-                                            <span>•</span>
-                                            <span>{recognition.location}</span>
-                                        </>
-                                    )}
-                                </div>
-                                
-                                <p className="text-[var(--text-secondary)] text-sm line-clamp-3 mb-3">
-                                    {recognition.description}
-                                </p>
-                                
-                                {recognition.certificate && (
-                                    <a
-                                        href={recognition.certificate}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center text-[var(--accent-color)] hover:underline text-sm font-medium"
-                                    >
-                                        View certificate →
-                                    </a>
-                                )}
-                            </div>
+                            <RecognitionView 
+                                title={recognition.title}
+                                organization={recognition.organization}
+                                date={recognition.date}
+                                type={recognition.type}
+                                location={recognition.location}
+                                description={recognition.description}
+                                certificate={recognition.certificate}
+                            />
                         </AnimateOnScroll>
                     ))}
                 </div>
