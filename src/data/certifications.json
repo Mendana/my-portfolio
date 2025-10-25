@@ -1,6 +1,14 @@
 {
     "certifications": [
         {
+            "title": "Low-code Automation with n8n",
+            "institution": "Platzi",
+            "date": "10-2025",
+            "hours": 7,
+            "area": "ML/AI",
+            "aptitudes": ["n8n", "Automation", "Low-code" ]
+        },
+        {
             "title": "Neural Networks with PyTorch",
             "institution": "Platzi",
             "date": "09-2025",
