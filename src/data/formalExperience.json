@@ -1,6 +1,18 @@
 {
     "experiences": [
         {
+            "title": "Software Development and AI Intern",
+            "jobType": "Internship",
+            "workingDay": "Part-time",
+            "company": "ASAC",
+            "startDate": "oct. 2025",
+            "endDate": "present",
+            "description": "Development of software solutions and RAG systems using AI technologies.",
+            "keyAchievements": ["PDF to MD converter using Ollama"],
+            "technologies": ["Python", "Ollama"],
+            "location": "Oviedo, Spain"
+        },
+        {
             "title": "IT Services Intern",
             "jobType": "Internship",
             "workingDay": "Part-time",
