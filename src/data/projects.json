@@ -7,7 +7,7 @@
             "image": "/images/mathtexpedia.avif",
             "link": "https://mathtexpedia.es/",
             "genre": "Frontend",
-            "status": "Development",
+            "status": "Live",
             "year": 2025
         },
         {
@@ -15,7 +15,7 @@
             "description": "A static website built for a local trail running event with all the information about the course, registration, and results.",
             "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
             "image": "/images/trail-arbas.avif",
-            "link": "https://web-trail-valle-arbas.web.app/",
+            "link": "https://valledearbas.es/",
             "genre": "Frontend",
             "status": "Live",
             "year": 2025

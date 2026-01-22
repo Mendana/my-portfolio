@@ -10,13 +10,30 @@ import projectsData from '../data/projects.json';
 import Education from './Education';
 import AnimateOnScroll from './AnimateOnScroll';
 import Experience from './Experience';
+import { useState } from 'react';
 
 
 function AppContent() {
     const { isDark } = useTheme();
+    const [monthsWorked, setMonthsWorked] = useState(0);
+
+    // Display the time worked -> format XX years, YY months
+    const formatTimeWorked = (months) => {
+        const years = Math.floor(months / 12);
+        const remainingMonths = months % 12;
+        let result = '';
+        if (years > 0) {
+            result += `${years} year${years > 1 ? 's' : ''}`;
+        }
+        if (remainingMonths > 0) {
+            if (years > 0) result += ', ';
+            result += `${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`;
+        }
+        return result || '0 months';
+    };
 
     return (
-        <main className={`bg-[var(--bg-primary)] transition-colors duration-300 ${isDark ? 'dark-theme' : 'light-theme'}`}>
+        <main className={`bg-(--bg-primary) transition-colors duration-300 ${isDark ? 'dark-theme' : 'light-theme'}`}>
             <ScrollProgressBar />
             {/* Nav responsive */}
             <div className="md:hidden">
@@ -29,7 +46,7 @@ function AppContent() {
             
         <header className='w-9/10 mx-auto lg:max-w-[1200px]'>
           <AnimateOnScroll direction="fromLeft">
-            <h2 className='title-underline text-xl text-[var(--text-tertiary)] mt-40 '>
+            <h2 className='title-underline text-xl text-(--text-tertiary) mt-40 '>
               PORTFOLIO 2025
             </h2>
           </AnimateOnScroll>
@@ -37,7 +54,7 @@ function AppContent() {
         <main className='w-9/10 mx-auto mt-12 lg:max-w-[1200px]'>
           <section className='mb-50'>
             <AnimateOnScroll direction="fromRight" delay={0.2}>
-              <h1 className='text-6xl font-bold font-mono leading-tight min-h-[9.5rem] md:text-8xl lg:text-9xl text-[var(--text-primary)]'>
+              <h1 className='text-6xl font-bold font-mono leading-tight min-h-38 md:text-8xl lg:text-9xl text-(--text-primary)'>
                 <Typewriter
                   words={['DIEGO DÍAZ MENDAÑA']}
                   loop={0} // 0 = infinito
@@ -64,7 +81,7 @@ function AppContent() {
                     </li>
                     <li>
                       <h6 className='text-xl font-medium md:text-2xl'>EXPERIENCE</h6>
-                      <p className='md:text-xl'>No professional experience yet</p>
+                      <p className='md:text-xl'>{formatTimeWorked(monthsWorked)}</p>
                     </li>
                   </ul>
                 </article>
@@ -80,7 +97,7 @@ function AppContent() {
 
           <section id='work' className='mb-80'>
             <AnimateOnScroll direction="fromLeft">
-              <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>SELECTED WORK</h2>
+              <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-(--text-primary)'>SELECTED WORK</h2>
             </AnimateOnScroll>
 
             <AnimateOnScroll direction="fromRight" delay={0.2}>
@@ -112,7 +129,7 @@ function AppContent() {
 
           <section id='experience' className='mb-80'>
             <AnimateOnScroll direction="fromLeft">
-              <Experience />
+              <Experience setMonthsWorked={setMonthsWorked} />
             </AnimateOnScroll>
           </section>
 

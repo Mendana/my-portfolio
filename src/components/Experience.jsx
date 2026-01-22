@@ -1,14 +1,14 @@
 import { MdWork } from "react-icons/md";
 import formalExperience from "../data/formalExperience.json";
 import FormalExperienceItem from "./FormalExperienceItem";
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import AnimateOnScroll from './AnimateOnScroll';
 import LoadingSpinner from './LoadingSpinner';
 
 // Importación dinámica
 const ExperiencesModal = lazy(() => import('./ExperiencesModal'));
 
-function Experience() {
+function Experience({ setMonthsWorked }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     
     const getNumExperiences = () => {
@@ -39,10 +39,37 @@ function Experience() {
         return sortExperiences.slice(0, 3);
     };
 
+    // Calcular el total de meses trabajados
+    const calculateTotalMonthsWorked = () => {
+        let totalMonths = 0;
+
+        formalExperience.experiences.forEach((exp) => {
+            const startParts = exp.startDate.split("-");
+            const endParts = exp.endDate === "present" ? null : exp.endDate.split("-");
+
+            const startDate = new Date(parseInt(startParts[1]), parseInt(startParts[0]) - 1);
+            const endDate = endParts 
+                ? new Date(parseInt(endParts[1]), parseInt(endParts[0]) - 1) 
+                : new Date();
+
+            const monthsWorked = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+            totalMonths += monthsWorked;
+        });
+
+        return totalMonths;
+    };
+
+    // Actualizar el estado de meses trabajados al montar el componente
+    useEffect(() => {
+        const totalMonths = calculateTotalMonthsWorked();
+        setMonthsWorked(totalMonths);
+        console.log("Total months worked:", totalMonths);
+    }, [setMonthsWorked]);
+
     return (
         <div>
             <AnimateOnScroll direction="fromLeft">
-                <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-[var(--text-primary)]'>EXPERIENCE</h2>
+                <h2 className='text-5xl font-bold mb-8 lg:text-6xl text-(--text-primary)'>EXPERIENCE</h2>
             </AnimateOnScroll>
             
             <AnimateOnScroll direction="fromRight" delay={0.2}>
@@ -53,8 +80,8 @@ function Experience() {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                     <AnimateOnScroll direction="fromLeft" delay={0.3}>
                         <div>
-                            <h3 className="text-4xl font-semibold text-[var(--text-primary)] mt-8">PROFESSIONAL JOURNEY</h3>
-                            <p className="mt-4 mb-4 text-[var(--text-tertiary)] text-[1.4rem]">{getNumExperiences()} experiences • Latest:</p>
+                            <h3 className="text-4xl font-semibold text-(--text-primary) mt-8">PROFESSIONAL JOURNEY</h3>
+                            <p className="mt-4 mb-4 text-(--text-tertiary) text-[1.4rem]">{getNumExperiences()} experiences • Latest:</p>
                         </div>
                     </AnimateOnScroll>
                     
@@ -77,8 +104,8 @@ function Experience() {
                             direction="fromBottom" 
                             delay={0.1 * index}
                         >
-                            <div className="relative pl-[16px] border-l-2 pb-8 pt-2 border-[var(--text-primary)] md:pl-[32px] md:border-l-3">
-                                <div className="absolute left-[-7px] top-[-2px] w-5 h-5 bg-[var(--text-primary)] rounded-full lg:left-[-7px] xl:left[-5px]" />
+                            <div className="relative pl-4 border-l-2 pb-8 pt-2 border-(--text-primary) md:pl-8 md:border-l-3">
+                                <div className="absolute left-[-7px] -top-0.5 w-5 h-5 bg-(--text-primary) rounded-full lg:left-[-7px] xl:left[-5px]" />
                                 <FormalExperienceItem
                                     title={item.title}
                                     jobType={item.jobType}
