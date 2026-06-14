@@ -1,28 +1,32 @@
 {
-    "experiences": [
-        {
-            "title": "Software Development and AI Intern",
-            "jobType": "Internship",
-            "workingDay": "Part-time",
-            "company": "ASAC",
-            "startDate": "10-2025",
-            "endDate": "present",
-            "description": "Development of software solutions and RAG systems using AI technologies.",
-            "keyAchievements": ["PDF to MD converter using Ollama"],
-            "technologies": ["Python", "Ollama"],
-            "location": "Oviedo, Spain"
-        },
-        {
-            "title": "IT Services Intern",
-            "jobType": "Internship",
-            "workingDay": "Part-time",
-            "company": "University of Oviedo",
-            "startDate": "11-2024",
-            "endDate": "07-2025",
-            "description": "Lab review, equipment repair, and troubleshooting during class.",
-            "keyAchievements": [],
-            "technologies": [],
-            "location": "Oviedo, Spain"
-        }
-    ]
+  "experiences": [
+    {
+      "title": "Software Development and AI Intern",
+      "jobType": "Internship",
+      "workingDay": "Part-time",
+      "company": "Fundación de la Universidad de Oviedo",
+      "startDate": "10-2025",
+      "endDate": "present",
+      "description": "Development of software solutions and RAG systems using AI technologies for a project in ASAC",
+      "keyAchievements": [
+        "PDF to MD converter using Ollama",
+        "RAG system for tender and bidding documents using LlamaIndex and LiteLLM"
+      ],
+      "technologies": ["Python", "Ollama", "LlamaIndex", "LiteLLM"],
+      "location": "Oviedo, Spain"
+    },
+    {
+      "title": "IT Services Intern",
+      "jobType": "Internship",
+      "workingDay": "Part-time",
+      "company": "University of Oviedo",
+      "startDate": "11-2024",
+      "endDate": "07-2025",
+      "description": "Lab review, equipment repair, and troubleshooting during class.",
+      "keyAchievements": [],
+      "technologies": [],
+      "location": "Oviedo, Spain"
+    }
+  ]
 }
+
