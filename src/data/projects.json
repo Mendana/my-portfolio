@@ -4,7 +4,7 @@
       "name": "Casa Rural Valle de Arbas Website",
       "description": "A static website for a rural house in the Arbas Valley, showcasing the property, amenities, and booking information.",
       "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
-      "image": "/images/casaruralvalledearbas.avif",
+      "image": "/images/casa-rural.avif",
       "link": "https://mendana.github.io/casa-rural-valle-de-arbas/",
       "genre": "Frontend",
       "status": "development",
