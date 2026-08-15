@@ -1,54 +1,64 @@
 {
-    "projects": [
-        {
-            "name": "MathTexpedia Frontend Design and Development",
-            "description": "A web application that provides mathematical resources and tools for students and educators, featuring LaTeX rendering and pdf notes.",
-            "technologies": ["Next", "TypeScript", "Shadcn", "Tailwind CSS", "React"],
-            "image": "/images/mathtexpedia.avif",
-            "link": "https://mathtexpedia.es/",
-            "genre": "Frontend",
-            "status": "Live",
-            "year": 2025
-        },
-        {
-            "name": "Arbas Trail Running Event Static Website",
-            "description": "A static website built for a local trail running event with all the information about the course, registration, and results.",
-            "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
-            "image": "/images/trail-arbas.avif",
-            "link": "https://valledearbas.es/",
-            "genre": "Frontend",
-            "status": "Live",
-            "year": 2025
-        },
-        {
-            "name": "Frontend - Admin Dashboard for Schedule Management",
-            "description": "An interactive platform for managing schedules of the university's subjects, allowing administrators to create, update, and delete classes and manage student enrollments.",
-            "technologies": ["React", "JavaScript", "Tailwind CSS"],
-            "image": "/images/pceo-dashboard.avif",
-            "link": "https://pceo-dashboard.web.app/",
-            "genre": "Frontend",
-            "status": "Live",
-            "year": 2025
-        },
-        {
-            "name": "Frontend - Schedule Visualizer",
-            "description": "A web application that allows students to visualize their class schedules, providing an intuitive interface to view their academic timetable.",
-            "technologies": ["React", "JavaScript", "Tailwind CSS"],
-            "image": "/images/horariospceo.avif",
-            "link": "https://horariospceo.web.app/",
-            "genre": "Frontend",
-            "status": "Live",
-            "year": 2025
-        },
-        {
-            "name": "Python Scrapper for extracting the schedules",
-            "description": "A Python script designed to scrape class schedules from the university's website and a SharePoint, automating the process of data extraction for further processing.",
-            "technologies": ["Python", "Playwright"],
-            "image": "/images/scrapper.png",
-            "link": "https://github.com/Mendana/scraper-horarios",
-            "genre": "Scrapper",
-            "status": "Live",
-            "year": 2025
-        }
-    ]
+  "projects": [
+    {
+      "name": "Casa Rural Valle de Arbas Website",
+      "description": "A static website for a rural house in the Arbas Valley, showcasing the property, amenities, and booking information.",
+      "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
+      "image": "/images/casaruralvalledearbas.avif",
+      "link": "https://mendana.github.io/casa-rural-valle-de-arbas/",
+      "genre": "Frontend",
+      "status": "development",
+      "year": 2026
+    },
+    {
+      "name": "MathTexpedia Frontend Design and Development",
+      "description": "A web application that provides mathematical resources and tools for students and educators, featuring LaTeX rendering and pdf notes.",
+      "technologies": ["Next", "TypeScript", "Shadcn", "Tailwind CSS", "React"],
+      "image": "/images/mathtexpedia.avif",
+      "link": "https://mathtexpedia.es/",
+      "genre": "Frontend",
+      "status": "Live",
+      "year": 2025
+    },
+    {
+      "name": "Arbas Trail Running Event Static Website",
+      "description": "A static website built for a local trail running event with all the information about the course, registration, and results.",
+      "technologies": ["Astro", "JavaScript", "Tailwind CSS", "TypeScript"],
+      "image": "/images/trail-arbas.avif",
+      "link": "https://valledearbas.es/",
+      "genre": "Frontend",
+      "status": "Live",
+      "year": 2025
+    },
+    {
+      "name": "Frontend - Admin Dashboard for Schedule Management",
+      "description": "An interactive platform for managing schedules of the university's subjects, allowing administrators to create, update, and delete classes and manage student enrollments.",
+      "technologies": ["React", "JavaScript", "Tailwind CSS"],
+      "image": "/images/pceo-dashboard.avif",
+      "link": "https://pceo-dashboard.web.app/",
+      "genre": "Frontend",
+      "status": "development",
+      "year": 2025
+    },
+    {
+      "name": "Frontend - Schedule Visualizer",
+      "description": "A web application that allows students to visualize their class schedules, providing an intuitive interface to view their academic timetable.",
+      "technologies": ["React", "JavaScript", "Tailwind CSS"],
+      "image": "/images/horariospceo.avif",
+      "link": "https://horariospceo.web.app/",
+      "genre": "Frontend",
+      "status": "development",
+      "year": 2025
+    },
+    {
+      "name": "Python Scrapper for extracting the schedules",
+      "description": "A Python script designed to scrape class schedules from the university's website and a SharePoint, automating the process of data extraction for further processing.",
+      "technologies": ["Python", "Playwright"],
+      "image": "/images/scrapper.png",
+      "link": "https://github.com/Mendana/scraper-horarios",
+      "genre": "Scrapper",
+      "status": "Live",
+      "year": 2025
+    }
+  ]
 }
