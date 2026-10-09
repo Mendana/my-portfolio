@@ -6,13 +6,21 @@
       "workingDay": "Part-time",
       "company": "Fundación de la Universidad de Oviedo",
       "startDate": "10-2025",
-      "endDate": "present",
-      "description": "Development of software solutions and RAG systems using AI technologies for a project in ASAC",
+      "endDate": "10-2026",
+      "description": "Development of software solutions and RAG systems using AI technologies.",
       "keyAchievements": [
         "PDF to MD converter using Ollama",
-        "RAG system for tender and bidding documents using LlamaIndex and LiteLLM"
+        "RAG system for tender and bidding documents using LlamaIndex and LiteLLM",
+        "IAProxy using Spring Boot and Angular for LiteLLM and Ollama"
       ],
-      "technologies": ["Python", "Ollama", "LlamaIndex", "LiteLLM"],
+      "technologies": [
+        "Python",
+        "Ollama",
+        "LlamaIndex",
+        "LiteLLM",
+        "Spring Boot",
+        "Angular"
+      ],
       "location": "Oviedo, Spain"
     },
     {
@@ -29,4 +37,3 @@
     }
   ]
 }
-
